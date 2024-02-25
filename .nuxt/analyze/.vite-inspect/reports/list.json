@@ -7,11 +7,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 3
+          "transform": 1
         },
         {
           "name": "vite:define",
-          "transform": 16
+          "transform": 8
         },
         {
           "name": "alias",
@@ -19,7 +19,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 19,
+      "totalTime": 9,
       "invokeCount": 1,
       "sourceSize": 391,
       "distSize": 0
@@ -30,11 +30,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 30
+          "transform": 65
         },
         {
           "name": "vite:vue",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "nuxt:components-loader",
@@ -42,9 +42,74 @@
         }
       ],
       "virtual": false,
-      "totalTime": 31,
+      "totalTime": 65,
       "invokeCount": 1,
-      "sourceSize": 60,
+      "sourceSize": 94,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/assets/styles/main.scss",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 67
+        },
+        {
+          "name": "vite:css",
+          "transform": 264
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "ssr-styles",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 331,
+      "invokeCount": 1,
+      "sourceSize": 23,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/assets/styles/main.scss?inline&used",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/layouts/default.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 152
+        },
+        {
+          "name": "vite:vue",
+          "transform": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 153,
+      "invokeCount": 1,
+      "sourceSize": 53,
       "distSize": 0
     },
     {
@@ -53,7 +118,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 57
+          "transform": 96
         },
         {
           "name": "vite:vue",
@@ -73,11 +138,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 59,
+      "totalTime": 98,
       "invokeCount": 1,
       "sourceSize": 5283,
       "distSize": 0
@@ -92,15 +157,15 @@
         },
         {
           "name": "vite:css",
-          "transform": 89
+          "transform": 13
         },
         {
           "name": "vite:vue",
-          "transform": 2
+          "transform": 1
         }
       ],
       "virtual": true,
-      "totalTime": 91,
+      "totalTime": 14,
       "invokeCount": 1,
       "sourceSize": 3195,
       "distSize": 0
@@ -111,7 +176,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 61
+          "transform": 90
         },
         {
           "name": "vite:vue",
@@ -119,7 +184,7 @@
         },
         {
           "name": "nuxt:imports-transform",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "vite:resolve",
@@ -127,11 +192,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 63,
+      "totalTime": 91,
       "invokeCount": 1,
       "sourceSize": 3283,
       "distSize": 0
@@ -146,7 +211,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 89
+          "transform": 9
         },
         {
           "name": "vite:vue",
@@ -154,7 +219,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 90,
+      "totalTime": 10,
       "invokeCount": 1,
       "sourceSize": 1494,
       "distSize": 0
@@ -165,15 +230,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 54
+          "transform": 93
         },
         {
           "name": "vite:vue",
-          "transform": 2
+          "transform": 1
         },
         {
           "name": "nuxt:imports-transform",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "vite:resolve",
@@ -181,11 +246,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 57,
+      "totalTime": 94,
       "invokeCount": 1,
       "sourceSize": 4089,
       "distSize": 0
@@ -200,15 +265,15 @@
         },
         {
           "name": "vite:css",
-          "transform": 90
+          "transform": 12
         },
         {
           "name": "vite:vue",
-          "transform": 4
+          "transform": 1
         }
       ],
       "virtual": true,
-      "totalTime": 94,
+      "totalTime": 13,
       "invokeCount": 1,
       "sourceSize": 1946,
       "distSize": 0
@@ -219,19 +284,19 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 65
         },
         {
           "name": "vite:vue",
-          "transform": 10
+          "transform": 12
         },
         {
           "name": "nuxt:imports-transform",
-          "transform": 12
+          "transform": 10
         }
       ],
       "virtual": false,
-      "totalTime": 48,
+      "totalTime": 87,
       "invokeCount": 1,
       "sourceSize": 106155,
       "distSize": 0
@@ -246,17 +311,36 @@
         },
         {
           "name": "vite:css",
-          "transform": 91
+          "transform": 38
         },
         {
           "name": "vite:vue",
-          "transform": 12
+          "transform": 9
         }
       ],
       "virtual": true,
-      "totalTime": 103,
+      "totalTime": 47,
       "invokeCount": 1,
       "sourceSize": 11760,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 28
+        },
+        {
+          "name": "vite:define",
+          "transform": 179
+        }
+      ],
+      "virtual": false,
+      "totalTime": 207,
+      "invokeCount": 1,
+      "sourceSize": 481,
       "distSize": 0
     },
     {
@@ -265,7 +349,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 25
+          "transform": 181
         },
         {
           "name": "vite:resolve",
@@ -277,7 +361,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 25,
+      "totalTime": 181,
       "invokeCount": 1,
       "sourceSize": 4451,
       "distSize": 0
@@ -288,11 +372,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 22
+          "transform": 65
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
@@ -308,7 +392,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 22,
+      "totalTime": 65,
       "invokeCount": 1,
       "sourceSize": 20287,
       "distSize": 0
@@ -319,7 +403,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 24
+          "transform": 187
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -347,7 +439,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 24,
+      "totalTime": 187,
       "invokeCount": 1,
       "sourceSize": 3864,
       "distSize": 0
@@ -358,15 +450,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 23
+          "transform": 59
         },
         {
           "name": "vite:define",
-          "transform": 164
+          "transform": 185
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -374,7 +466,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 187,
+      "totalTime": 244,
       "invokeCount": 1,
       "sourceSize": 2633,
       "distSize": 0
@@ -385,15 +477,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 22
+          "transform": 65
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 22,
+      "totalTime": 65,
       "invokeCount": 1,
       "sourceSize": 1035,
       "distSize": 0
@@ -408,7 +500,7 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
@@ -427,7 +519,7 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
@@ -442,15 +534,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 1
+          "transform": 2
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 1,
+      "totalTime": 2,
       "invokeCount": 1,
       "sourceSize": 11,
       "distSize": 0
@@ -461,7 +553,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 0
+          "transform": 2
         },
         {
           "name": "vite:resolve",
@@ -469,7 +561,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 0,
+      "totalTime": 2,
       "invokeCount": 1,
       "sourceSize": 11,
       "distSize": 0
@@ -499,7 +591,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 17
+          "transform": 15
         },
         {
           "name": "vite:resolve",
@@ -507,7 +599,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 17,
+      "totalTime": 15,
       "invokeCount": 1,
       "sourceSize": 169,
       "distSize": 0
@@ -518,7 +610,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 1
+          "transform": 2
         },
         {
           "name": "vite:resolve",
@@ -526,7 +618,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 1,
+      "totalTime": 2,
       "invokeCount": 1,
       "sourceSize": 11,
       "distSize": 0
@@ -537,7 +629,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 17
+          "transform": 15
         },
         {
           "name": "vite:resolve",
@@ -549,7 +641,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 17,
+      "totalTime": 15,
       "invokeCount": 1,
       "sourceSize": 114,
       "distSize": 0
@@ -560,7 +652,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 17
+          "transform": 15
         },
         {
           "name": "vite:resolve",
@@ -568,7 +660,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 17,
+      "totalTime": 15,
       "invokeCount": 1,
       "sourceSize": 457,
       "distSize": 0
@@ -579,7 +671,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 0
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -587,7 +683,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 0,
+      "totalTime": 7,
       "invokeCount": 1,
       "sourceSize": 1021,
       "distSize": 0
@@ -598,7 +694,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 18
+          "transform": 17
         },
         {
           "name": "vite:resolve",
@@ -606,7 +702,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 18,
+      "totalTime": 17,
       "invokeCount": 1,
       "sourceSize": 11,
       "distSize": 0
@@ -617,7 +713,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 16
+          "transform": 15
         },
         {
           "name": "vite:resolve",
@@ -625,7 +721,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 16,
+      "totalTime": 15,
       "invokeCount": 1,
       "sourceSize": 3535,
       "distSize": 0
@@ -636,7 +732,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 18
+          "transform": 17
         },
         {
           "name": "vite:resolve",
@@ -648,7 +744,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 18,
+      "totalTime": 17,
       "invokeCount": 1,
       "sourceSize": 652,
       "distSize": 0
@@ -667,7 +763,7 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
@@ -682,19 +778,19 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 1
+          "transform": 3
         },
         {
           "name": "vite:define",
-          "transform": 21
+          "transform": 33
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 22,
+      "totalTime": 36,
       "invokeCount": 1,
       "sourceSize": 251094,
       "distSize": 0
@@ -705,11 +801,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 24
+          "transform": 144
         },
         {
           "name": "vite:define",
-          "transform": 212
+          "transform": 249
         },
         {
           "name": "vite:resolve",
@@ -717,7 +813,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 236,
+      "totalTime": 393,
       "invokeCount": 1,
       "sourceSize": 49110,
       "distSize": 0
@@ -728,11 +824,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 0
+          "transform": 62
         },
         {
           "name": "vite:define",
-          "transform": 4
+          "transform": 32
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
@@ -744,11 +844,11 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 4,
+      "totalTime": 94,
       "invokeCount": 1,
       "sourceSize": 20762,
       "distSize": 0
@@ -759,15 +859,19 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 57
         },
         {
           "name": "vite:resolve",
           "resolveId": 2
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 26,
+      "totalTime": 57,
       "invokeCount": 1,
       "sourceSize": 3644,
       "distSize": 0
@@ -778,7 +882,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 27
+          "transform": 65
         },
         {
           "name": "vite:resolve",
@@ -791,10 +895,14 @@
         {
           "name": "vite:resolve",
           "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 27,
+      "totalTime": 65,
       "invokeCount": 1,
       "sourceSize": 2052,
       "distSize": 0
@@ -805,7 +913,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 31
+          "transform": 181
         },
         {
           "name": "vite:resolve",
@@ -830,10 +938,14 @@
         {
           "name": "vite:resolve",
           "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 31,
+      "totalTime": 181,
       "invokeCount": 1,
       "sourceSize": 2206,
       "distSize": 0
@@ -844,7 +956,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 60
         },
         {
           "name": "vite:resolve",
@@ -852,7 +964,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 26,
+      "totalTime": 60,
       "invokeCount": 1,
       "sourceSize": 141,
       "distSize": 0
@@ -863,11 +975,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 103
+          "transform": 22
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -875,7 +987,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 103,
+      "totalTime": 22,
       "invokeCount": 1,
       "sourceSize": 183,
       "distSize": 0
@@ -886,7 +998,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 55
+          "transform": 103
         },
         {
           "name": "vite:resolve",
@@ -894,7 +1006,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 55,
+      "totalTime": 103,
       "invokeCount": 1,
       "sourceSize": 3053,
       "distSize": 0
@@ -905,7 +1017,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 55
+          "transform": 142
         },
         {
           "name": "vite:resolve",
@@ -913,7 +1025,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 55,
+      "totalTime": 142,
       "invokeCount": 1,
       "sourceSize": 4304,
       "distSize": 0
@@ -924,7 +1036,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 54
+          "transform": 103
         },
         {
           "name": "vite:resolve",
@@ -932,7 +1044,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 54,
+      "totalTime": 103,
       "invokeCount": 1,
       "sourceSize": 6924,
       "distSize": 0
@@ -943,11 +1055,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 103
+          "transform": 24
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
@@ -955,7 +1067,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 103,
+      "totalTime": 24,
       "invokeCount": 1,
       "sourceSize": 1944,
       "distSize": 0
@@ -966,11 +1078,23 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 64
+          "transform": 188
         },
         {
           "name": "vite:resolve",
           "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
@@ -982,7 +1106,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 64,
+      "totalTime": 188,
       "invokeCount": 1,
       "sourceSize": 61189,
       "distSize": 0
@@ -993,7 +1117,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 33
+          "transform": 140
         },
         {
           "name": "vite:resolve",
@@ -1005,7 +1129,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 33,
+      "totalTime": 140,
       "invokeCount": 1,
       "sourceSize": 8302,
       "distSize": 0
@@ -1016,7 +1140,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 24
+          "transform": 58
         },
         {
           "name": "vite:resolve",
@@ -1024,7 +1148,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 24,
+      "totalTime": 58,
       "invokeCount": 1,
       "sourceSize": 11782,
       "distSize": 0
@@ -1035,7 +1159,30 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 4
+          "transform": 5
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 5,
+      "invokeCount": 1,
+      "sourceSize": 1531,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/capi.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 14
         },
         {
           "name": "vite:resolve",
@@ -1043,9 +1190,9 @@
         }
       ],
       "virtual": false,
-      "totalTime": 4,
+      "totalTime": 14,
       "invokeCount": 1,
-      "sourceSize": 1531,
+      "sourceSize": 398,
       "distSize": 0
     },
     {
@@ -1054,7 +1201,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 27
+          "transform": 94
         },
         {
           "name": "replace",
@@ -1067,12 +1214,85 @@
         {
           "name": "vite:resolve",
           "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 27,
+      "totalTime": 94,
       "invokeCount": 1,
       "sourceSize": 456,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/vue-demi.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 8
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 112,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/client-only.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 5
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 8
+        }
+      ],
+      "virtual": false,
+      "totalTime": 5,
+      "invokeCount": 1,
+      "sourceSize": 3563,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 95
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 95,
+      "invokeCount": 1,
+      "sourceSize": 49,
       "distSize": 0
     },
     {
@@ -1081,7 +1301,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 32
+          "transform": 152
         },
         {
           "name": "vite:resolve",
@@ -1090,10 +1310,26 @@
         {
           "name": "vite:resolve",
           "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 32,
+      "totalTime": 152,
       "invokeCount": 1,
       "sourceSize": 103,
       "distSize": 0
@@ -1104,7 +1340,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 33
+          "transform": 145
         },
         {
           "name": "vite:resolve",
@@ -1112,7 +1348,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 33,
+      "totalTime": 145,
       "invokeCount": 1,
       "sourceSize": 711,
       "distSize": 0
@@ -1123,34 +1359,34 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 31
+          "transform": 70
         },
         {
           "name": "vite:vue",
-          "transform": 5
+          "transform": 4
         },
         {
           "name": "replace",
-          "transform": 0
+          "transform": 1
         },
         {
           "name": "vite:build-import-analysis",
-          "transform": 1
+          "transform": 0
         }
       ],
       "virtual": false,
-      "totalTime": 37,
+      "totalTime": 75,
       "invokeCount": 1,
       "sourceSize": 1688,
       "distSize": 0
     },
     {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-link.js",
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-layout.js",
       "deps": [],
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 103
+          "transform": 92
         },
         {
           "name": "replace",
@@ -1162,7 +1398,34 @@
         }
       ],
       "virtual": false,
-      "totalTime": 103,
+      "totalTime": 92,
+      "invokeCount": 1,
+      "sourceSize": 4573,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-link.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 59
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 59,
       "invokeCount": 1,
       "sourceSize": 10742,
       "distSize": 0
@@ -1173,7 +1436,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 47
         },
         {
           "name": "vite:vue",
@@ -1193,9 +1456,36 @@
         }
       ],
       "virtual": false,
-      "totalTime": 44,
+      "totalTime": 65,
       "invokeCount": 1,
       "sourceSize": 2456,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/route-provider.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 57
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 68
+        }
+      ],
+      "virtual": false,
+      "totalTime": 57,
+      "invokeCount": 1,
+      "sourceSize": 1419,
       "distSize": 0
     },
     {
@@ -1204,7 +1494,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 37
+          "transform": 69
         },
         {
           "name": "vite:build-import-analysis",
@@ -1216,263 +1506,22 @@
         }
       ],
       "virtual": false,
-      "totalTime": 37,
+      "totalTime": 69,
       "invokeCount": 1,
       "sourceSize": 943,
       "distSize": 0
     },
     {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/chunk.js",
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/utils.js",
       "deps": [],
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 23
+          "transform": 92
         },
         {
           "name": "replace",
           "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 23,
-      "invokeCount": 1,
-      "sourceSize": 889,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/error.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 17
-        },
-        {
-          "name": "replace",
-          "transform": 1
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 18,
-      "invokeCount": 1,
-      "sourceSize": 1236,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/manifest.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 26
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 26,
-      "invokeCount": 1,
-      "sourceSize": 984,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/payload.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 25
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:build-import-analysis",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 25,
-      "invokeCount": 1,
-      "sourceSize": 3767,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/preload.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 5
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 5,
-      "invokeCount": 1,
-      "sourceSize": 1600,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ready.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 26
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 26,
-      "invokeCount": 1,
-      "sourceSize": 412,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/router.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 60
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 60,
-      "invokeCount": 1,
-      "sourceSize": 5939,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/config.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 26
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 166
         },
         {
           "name": "vite:resolve",
@@ -1484,11 +1533,660 @@
         },
         {
           "name": "alias",
+          "resolveId": 149
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
           "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 192,
+      "totalTime": 92,
+      "invokeCount": 1,
+      "sourceSize": 4019,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/asyncData.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 51
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 53,
+      "invokeCount": 1,
+      "sourceSize": 8145,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/chunk.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 286
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 286,
+      "invokeCount": 1,
+      "sourceSize": 889,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/component.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 49
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 49,
+      "invokeCount": 1,
+      "sourceSize": 2158,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/cookie.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 56
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 56,
+      "invokeCount": 1,
+      "sourceSize": 5238,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/error.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 24
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 24,
+      "invokeCount": 1,
+      "sourceSize": 1236,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/fetch.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 54
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 54,
+      "invokeCount": 1,
+      "sourceSize": 3471,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/hydrate.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 51
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 51,
+      "invokeCount": 1,
+      "sourceSize": 367,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/id.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 58
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 58,
+      "invokeCount": 1,
+      "sourceSize": 1651,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 95
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 95,
+      "invokeCount": 1,
+      "sourceSize": 1310,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/manifest.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 183
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 183,
+      "invokeCount": 1,
+      "sourceSize": 984,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/once.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 50
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 50,
+      "invokeCount": 1,
+      "sourceSize": 793,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/payload.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 186
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:build-import-analysis",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 187,
+      "invokeCount": 1,
+      "sourceSize": 3767,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/preload.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 57
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 57,
+      "invokeCount": 1,
+      "sourceSize": 1600,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ready.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 183
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 183,
+      "invokeCount": 1,
+      "sourceSize": 412,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/router.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 192
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 305
+        },
+        {
+          "name": "alias",
+          "resolveId": 301
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 193,
+      "invokeCount": 1,
+      "sourceSize": 5939,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ssr.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 58
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 58,
+      "invokeCount": 1,
+      "sourceSize": 1659,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/state.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 50
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 50,
+      "invokeCount": 1,
+      "sourceSize": 1434,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/url.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 58
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 58,
+      "invokeCount": 1,
+      "sourceSize": 233,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/config.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 66
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 175
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 241,
       "invokeCount": 1,
       "sourceSize": 1574,
       "distSize": 0
@@ -1499,7 +2197,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 2
+          "transform": 0
         },
         {
           "name": "replace",
@@ -1507,9 +2205,32 @@
         }
       ],
       "virtual": false,
-      "totalTime": 3,
+      "totalTime": 1,
       "invokeCount": 1,
       "sourceSize": 2382,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 142
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 200
+        }
+      ],
+      "virtual": false,
+      "totalTime": 142,
+      "invokeCount": 1,
+      "sourceSize": 263,
       "distSize": 0
     },
     {
@@ -1518,7 +2239,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 34
+          "transform": 151
         },
         {
           "name": "replace",
@@ -1530,7 +2251,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 34,
+      "totalTime": 151,
       "invokeCount": 1,
       "sourceSize": 356,
       "distSize": 0
@@ -1541,7 +2262,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 19
+          "transform": 23
         },
         {
           "name": "replace",
@@ -1549,7 +2270,7 @@
         },
         {
           "name": "vite:define",
-          "transform": 56
+          "transform": 201
         },
         {
           "name": "vite:resolve",
@@ -1620,56 +2341,102 @@
           "resolveId": 0
         },
         {
-          "name": "alias",
-          "resolveId": 73
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "alias",
-          "resolveId": 20
+          "resolveId": 216
+        },
+        {
+          "name": "alias",
+          "resolveId": 179
+        },
+        {
+          "name": "alias",
+          "resolveId": 176
+        },
+        {
+          "name": "alias",
+          "resolveId": 172
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 76,
+      "totalTime": 225,
       "invokeCount": 1,
       "sourceSize": 7278,
       "distSize": 0
     },
     {
       "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 10
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 10,
-      "invokeCount": 1,
-      "sourceSize": 814,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 25
-        }
-      ],
-      "virtual": false,
-      "totalTime": 25,
-      "invokeCount": 1,
-      "sourceSize": 1042,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/payload.client.js",
       "deps": [],
       "plugins": [
         {
@@ -1684,6 +2451,40 @@
       "virtual": false,
       "totalTime": 24,
       "invokeCount": 1,
+      "sourceSize": 814,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 27
+        }
+      ],
+      "virtual": false,
+      "totalTime": 27,
+      "invokeCount": 1,
+      "sourceSize": 1042,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/payload.client.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 25
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 25,
+      "invokeCount": 1,
       "sourceSize": 1107,
       "distSize": 0
     },
@@ -1693,36 +2494,32 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 12
+          "transform": 10
         },
         {
           "name": "unctx:transform",
-          "transform": 1
+          "transform": 2
         }
       ],
       "virtual": false,
-      "totalTime": 13,
+      "totalTime": 12,
       "invokeCount": 1,
       "sourceSize": 1661,
       "distSize": 0
     },
     {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/router.js",
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/types.js",
       "deps": [],
       "plugins": [
         {
-          "name": "vite:load-fallback",
-          "transform": 15
-        },
-        {
-          "name": "replace",
-          "transform": 1
+          "name": "vite:resolve",
+          "resolveId": 0
         }
       ],
-      "virtual": false,
-      "totalTime": 16,
-      "invokeCount": 1,
-      "sourceSize": 7126,
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 33,
+      "sourceSize": 0,
       "distSize": 0
     },
     {
@@ -1731,7 +2528,19 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 5
+          "transform": 10
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -1739,7 +2548,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 5,
+      "totalTime": 10,
       "invokeCount": 1,
       "sourceSize": 84,
       "distSize": 0
@@ -1750,7 +2559,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 22
+          "transform": 14
         },
         {
           "name": "replace",
@@ -1758,9 +2567,143 @@
         }
       ],
       "virtual": false,
-      "totalTime": 22,
+      "totalTime": 14,
       "invokeCount": 1,
       "sourceSize": 1315,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/page.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 94
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 94,
+      "invokeCount": 1,
+      "sourceSize": 5949,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 27
+        }
+      ],
+      "virtual": false,
+      "totalTime": 27,
+      "invokeCount": 1,
+      "sourceSize": 1243,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/plugins/router.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 3
+        }
+      ],
+      "virtual": false,
+      "totalTime": 19,
+      "invokeCount": 1,
+      "sourceSize": 7762,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/router.options.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 153
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 153,
+      "invokeCount": 1,
+      "sourceSize": 1742,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/utils.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 185
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 185,
+      "invokeCount": 1,
+      "sourceSize": 873,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/validate.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 152
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 152,
+      "invokeCount": 1,
+      "sourceSize": 974,
       "distSize": 0
     },
     {
@@ -1769,15 +2712,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 11
+          "transform": 30
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 11,
+      "totalTime": 30,
       "invokeCount": 1,
       "sourceSize": 891,
       "distSize": 0
@@ -1788,7 +2731,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 32
+          "transform": 144
         },
         {
           "name": "vite:resolve",
@@ -1796,7 +2739,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 32,
+      "totalTime": 144,
       "invokeCount": 1,
       "sourceSize": 8818,
       "distSize": 0
@@ -1807,7 +2750,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 57
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -1815,7 +2766,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 26,
+      "totalTime": 57,
       "invokeCount": 1,
       "sourceSize": 20179,
       "distSize": 0
@@ -1826,7 +2777,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 65
+          "transform": 90
         },
         {
           "name": "vite:resolve",
@@ -1834,7 +2785,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 65,
+      "totalTime": 90,
       "invokeCount": 1,
       "sourceSize": 272,
       "distSize": 0
@@ -1845,7 +2796,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 106
+          "transform": 59
         },
         {
           "name": "vite:resolve",
@@ -1853,9 +2804,32 @@
         }
       ],
       "virtual": false,
-      "totalTime": 106,
+      "totalTime": 59,
       "invokeCount": 1,
       "sourceSize": 6539,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/pinia/dist/pinia.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 142
+        },
+        {
+          "name": "vite:define",
+          "transform": 248
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 390,
+      "invokeCount": 1,
+      "sourceSize": 74425,
       "distSize": 0
     },
     {
@@ -1864,7 +2838,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 27
+          "transform": 59
         },
         {
           "name": "vite:resolve",
@@ -1876,9 +2850,28 @@
         }
       ],
       "virtual": false,
-      "totalTime": 27,
+      "totalTime": 59,
       "invokeCount": 1,
       "sourceSize": 7089,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/tailwindcss/tailwind.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 66
+        },
+        {
+          "name": "vite:css",
+          "transform": 332
+        }
+      ],
+      "virtual": false,
+      "totalTime": 398,
+      "invokeCount": 1,
+      "sourceSize": 61,
       "distSize": 0
     },
     {
@@ -1891,10 +2884,6 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
-        },
-        {
-          "name": "vite:resolve",
           "resolveId": 0
         },
         {
@@ -1908,6 +2897,10 @@
         {
           "name": "vite:resolve",
           "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -1927,7 +2920,11 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -1946,7 +2943,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 28
+          "transform": 65
         },
         {
           "name": "vite:resolve",
@@ -1954,7 +2951,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 28,
+      "totalTime": 65,
       "invokeCount": 1,
       "sourceSize": 348,
       "distSize": 0
@@ -1965,7 +2962,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 26
+          "transform": 188
         },
         {
           "name": "vite:resolve",
@@ -1973,7 +2970,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 26,
+      "totalTime": 188,
       "invokeCount": 1,
       "sourceSize": 3878,
       "distSize": 0
@@ -1984,7 +2981,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 54
+          "transform": 97
         },
         {
           "name": "vite:resolve",
@@ -1996,11 +2993,11 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 54,
+      "totalTime": 97,
       "invokeCount": 1,
       "sourceSize": 895,
       "distSize": 0
@@ -2030,7 +3027,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 104
+          "transform": 20
         },
         {
           "name": "vite:resolve",
@@ -2042,7 +3039,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 104,
+      "totalTime": 20,
       "invokeCount": 1,
       "sourceSize": 218,
       "distSize": 0
@@ -2053,15 +3050,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 27
+          "transform": 61
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 27,
+      "totalTime": 61,
       "invokeCount": 1,
       "sourceSize": 1129,
       "distSize": 0
@@ -2072,7 +3069,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 28
+          "transform": 60
         },
         {
           "name": "vite:resolve",
@@ -2080,7 +3077,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 28,
+      "totalTime": 60,
       "invokeCount": 1,
       "sourceSize": 2193,
       "distSize": 0
@@ -2091,7 +3088,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 54
+          "transform": 98
         },
         {
           "name": "vite:resolve",
@@ -2099,7 +3096,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 54,
+      "totalTime": 98,
       "invokeCount": 1,
       "sourceSize": 1425,
       "distSize": 0
@@ -2110,7 +3107,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 105
+          "transform": 19
         },
         {
           "name": "vite:resolve",
@@ -2118,7 +3115,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 105,
+      "totalTime": 19,
       "invokeCount": 1,
       "sourceSize": 678,
       "distSize": 0
@@ -2129,7 +3126,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 55
+          "transform": 98
         },
         {
           "name": "vite:resolve",
@@ -2141,7 +3138,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 55,
+      "totalTime": 98,
       "invokeCount": 1,
       "sourceSize": 2697,
       "distSize": 0
@@ -2152,7 +3149,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 54
+          "transform": 98
         },
         {
           "name": "vite:resolve",
@@ -2164,7 +3161,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 54,
+      "totalTime": 98,
       "invokeCount": 1,
       "sourceSize": 2357,
       "distSize": 0
@@ -2175,11 +3172,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 25
+          "transform": 61
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -2187,7 +3184,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 25,
+      "totalTime": 61,
       "invokeCount": 1,
       "sourceSize": 20887,
       "distSize": 0
@@ -2198,19 +3195,27 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 61
+          "transform": 148
         },
         {
           "name": "vite:define",
-          "transform": 138
+          "transform": 276
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 199,
+      "totalTime": 424,
       "invokeCount": 1,
       "sourceSize": 147687,
       "distSize": 0
@@ -2221,11 +3226,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 14
+          "transform": 20
         },
         {
           "name": "vite:define",
-          "transform": 23
+          "transform": 174
         },
         {
           "name": "vite:resolve",
@@ -2261,34 +3266,6 @@
         },
         {
           "name": "vite:resolve",
-          "resolveId": 1
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 1
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
           "resolveId": 0
         },
         {
@@ -2306,6 +3283,94 @@
         {
           "name": "vite:resolve",
           "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -2317,9 +3382,55 @@
         }
       ],
       "virtual": false,
-      "totalTime": 37,
+      "totalTime": 194,
       "invokeCount": 1,
       "sourceSize": 580,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/pages/index.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 149
+        },
+        {
+          "name": "vite:vue",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:components-loader",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 150,
+      "invokeCount": 1,
+      "sourceSize": 131,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/pages/index.vue?macro=true",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 147
+        },
+        {
+          "name": "vite:vue",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:pages-macros-transform",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 148,
+      "invokeCount": 1,
+      "sourceSize": 131,
       "distSize": 0
     },
     {
@@ -2359,7 +3470,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": true,
@@ -2393,11 +3504,15 @@
       "plugins": [
         {
           "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
           "resolveId": 0
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 2
         },
         {
           "name": "ssr-styles",
@@ -2406,8 +3521,8 @@
       ],
       "virtual": true,
       "totalTime": 0,
-      "invokeCount": 31,
-      "sourceSize": 0,
+      "invokeCount": 1,
+      "sourceSize": 124,
       "distSize": 0
     },
     {
@@ -2457,7 +3572,7 @@
       "distSize": 0
     },
     {
-      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/middleware.mjs",
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/layouts.mjs",
       "deps": [],
       "plugins": [
         {
@@ -2465,8 +3580,20 @@
           "transform": 0
         },
         {
+          "name": "vite:build-import-analysis",
+          "transform": 0
+        },
+        {
           "name": "virtual",
           "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
         },
         {
           "name": "alias",
@@ -2476,7 +3603,38 @@
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 1,
-      "sourceSize": 236,
+      "sourceSize": 132,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/middleware.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 362,
       "distSize": 0
     },
     {
@@ -2493,7 +3651,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": true,
@@ -2539,6 +3697,30 @@
           "resolveId": 0
         },
         {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
           "name": "alias",
           "resolveId": 3
         },
@@ -2549,6 +3731,30 @@
         {
           "name": "alias",
           "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
         },
         {
           "name": "alias",
@@ -2574,6 +3780,37 @@
       "distSize": 0
     },
     {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/pages.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 53,
+      "distSize": 0
+    },
+    {
       "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/paths.mjs",
       "deps": [],
       "plugins": [
@@ -2583,7 +3820,7 @@
         },
         {
           "name": "replace",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "virtual",
@@ -2607,7 +3844,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 0
+          "resolveId": 1
         },
         {
           "name": "alias",
@@ -2619,7 +3856,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 1,
+      "totalTime": 0,
       "invokeCount": 1,
       "sourceSize": 622,
       "distSize": 0
@@ -2644,7 +3881,7 @@
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 1,
-      "sourceSize": 1182,
+      "sourceSize": 1528,
       "distSize": 0
     },
     {
@@ -2668,6 +3905,56 @@
       "totalTime": 0,
       "invokeCount": 1,
       "sourceSize": 119,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/router.options.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 264,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/routes.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "vite:build-import-analysis",
+          "transform": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 1,
+      "invokeCount": 1,
+      "sourceSize": 477,
       "distSize": 0
     },
     {
@@ -2707,13 +3994,44 @@
         },
         {
           "name": "alias",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 1,
       "sourceSize": 17,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/vue-router-stub.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 27,
       "distSize": 0
     }
   ],
@@ -2724,11 +4042,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 5
+          "transform": 0
         },
         {
           "name": "vite:define",
-          "transform": 23
+          "transform": 3
         },
         {
           "name": "alias",
@@ -2736,7 +4054,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 28,
+      "totalTime": 3,
       "invokeCount": 1,
       "sourceSize": 391,
       "distSize": 0
@@ -2747,11 +4065,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 11
+          "transform": 16
         },
         {
           "name": "vite:vue",
-          "transform": 2
+          "transform": 1
         },
         {
           "name": "nuxt:components-loader",
@@ -2759,9 +4077,78 @@
         }
       ],
       "virtual": false,
-      "totalTime": 13,
+      "totalTime": 17,
       "invokeCount": 1,
-      "sourceSize": 60,
+      "sourceSize": 94,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/assets/styles/main.scss",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 51
+        },
+        {
+          "name": "vite:css",
+          "transform": 33
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "ssr-styles",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 84,
+      "invokeCount": 1,
+      "sourceSize": 23,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/assets/styles/main.scss?inline&used",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 25
+        },
+        {
+          "name": "vite:css",
+          "transform": 28
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 53,
+      "invokeCount": 1,
+      "sourceSize": 23,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/layouts/default.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 58
+        },
+        {
+          "name": "vite:vue",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 58,
+      "invokeCount": 1,
+      "sourceSize": 53,
       "distSize": 0
     },
     {
@@ -2770,11 +4157,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 32
+          "transform": 18
         },
         {
           "name": "vite:vue",
-          "transform": 2
+          "transform": 4
         },
         {
           "name": "nuxt:imports-transform",
@@ -2794,11 +4181,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 36,
+      "totalTime": 24,
       "invokeCount": 1,
       "sourceSize": 5283,
       "distSize": 0
@@ -2813,7 +4200,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 6
+          "transform": 10
         },
         {
           "name": "vite:vue",
@@ -2821,7 +4208,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 8,
+      "totalTime": 12,
       "invokeCount": 1,
       "sourceSize": 3195,
       "distSize": 0
@@ -2836,7 +4223,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 14
+          "transform": 12
         },
         {
           "name": "vite:vue",
@@ -2848,7 +4235,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 16,
+      "totalTime": 14,
       "invokeCount": 1,
       "sourceSize": 3195,
       "distSize": 0
@@ -2859,11 +4246,11 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 59
+          "transform": 43
         },
         {
           "name": "vite:vue",
-          "transform": 2
+          "transform": 1
         },
         {
           "name": "nuxt:imports-transform",
@@ -2879,11 +4266,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 63,
+      "totalTime": 46,
       "invokeCount": 1,
       "sourceSize": 3283,
       "distSize": 0
@@ -2898,7 +4285,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 3
+          "transform": 8
         },
         {
           "name": "vite:vue",
@@ -2906,7 +4293,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 4,
+      "totalTime": 9,
       "invokeCount": 1,
       "sourceSize": 1494,
       "distSize": 0
@@ -2921,7 +4308,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 4
+          "transform": 8
         },
         {
           "name": "vite:vue",
@@ -2933,7 +4320,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 5,
+      "totalTime": 9,
       "invokeCount": 1,
       "sourceSize": 1494,
       "distSize": 0
@@ -2944,7 +4331,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 53
+          "transform": 38
         },
         {
           "name": "vite:vue",
@@ -2952,11 +4339,11 @@
         },
         {
           "name": "nuxt:imports-transform",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "nuxt:imports-transform",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "vite:resolve",
@@ -2964,11 +4351,11 @@
         },
         {
           "name": "ssr-styles",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": false,
-      "totalTime": 58,
+      "totalTime": 41,
       "invokeCount": 1,
       "sourceSize": 4089,
       "distSize": 0
@@ -2983,7 +4370,7 @@
         },
         {
           "name": "vite:css",
-          "transform": 5
+          "transform": 9
         },
         {
           "name": "vite:vue",
@@ -2991,7 +4378,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 6,
+      "totalTime": 10,
       "invokeCount": 1,
       "sourceSize": 1946,
       "distSize": 0
@@ -3002,15 +4389,15 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 3
+          "transform": 88
         },
         {
           "name": "vite:vue",
-          "transform": 28
+          "transform": 20
         },
         {
           "name": "vite:define",
-          "transform": 84
+          "transform": 83
         },
         {
           "name": "nuxt:imports-transform",
@@ -3022,7 +4409,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 133,
+      "totalTime": 209,
       "invokeCount": 1,
       "sourceSize": 106155,
       "distSize": 0
@@ -3033,11 +4420,11 @@
       "plugins": [
         {
           "name": "vite:vue",
-          "transform": 1
+          "transform": 0
         },
         {
           "name": "vite:css",
-          "transform": 24
+          "transform": 39
         },
         {
           "name": "vite:vue",
@@ -3045,7 +4432,7 @@
         }
       ],
       "virtual": true,
-      "totalTime": 29,
+      "totalTime": 43,
       "invokeCount": 1,
       "sourceSize": 11760,
       "distSize": 0
@@ -3060,11 +4447,11 @@
         },
         {
           "name": "vite:css",
-          "transform": 26
+          "transform": 24
         },
         {
           "name": "vite:vue",
-          "transform": 5
+          "transform": 6
         },
         {
           "name": "vite:css-post",
@@ -3072,9 +4459,28 @@
         }
       ],
       "virtual": true,
-      "totalTime": 31,
+      "totalTime": 30,
       "invokeCount": 1,
       "sourceSize": 11760,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 84
+        },
+        {
+          "name": "vite:define",
+          "transform": 34
+        }
+      ],
+      "virtual": false,
+      "totalTime": 118,
+      "invokeCount": 1,
+      "sourceSize": 481,
       "distSize": 0
     },
     {
@@ -3083,7 +4489,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 8
+          "transform": 24
         },
         {
           "name": "vite:resolve",
@@ -3095,7 +4501,15 @@
         },
         {
           "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
           "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
         },
         {
           "name": "vite:resolve",
@@ -3111,7 +4525,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 8,
+      "totalTime": 24,
       "invokeCount": 1,
       "sourceSize": 3864,
       "distSize": 0
@@ -3122,7 +4536,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 8
+          "transform": 16
         },
         {
           "name": "vite:define",
@@ -3138,7 +4552,7 @@
         }
       ],
       "virtual": false,
-      "totalTime": 21,
+      "totalTime": 29,
       "invokeCount": 1,
       "sourceSize": 2633,
       "distSize": 0
@@ -3149,7 +4563,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 9
+          "transform": 16
         },
         {
           "name": "nuxt:tree-shake-composables:transform",
@@ -3158,562 +4572,16 @@
         {
           "name": "vite:resolve",
           "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 9,
-      "invokeCount": 1,
-      "sourceSize": 1035,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/idle-callback.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 1
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 1,
-      "invokeCount": 1,
-      "sourceSize": 456,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/injections.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 12
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 12,
-      "invokeCount": 1,
-      "sourceSize": 103,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/island-renderer.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 11
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 11,
-      "invokeCount": 1,
-      "sourceSize": 711,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-error-page.vue",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 13
-        },
-        {
-          "name": "vite:vue",
-          "transform": 3
-        },
-        {
-          "name": "replace",
-          "transform": 0
         }
       ],
       "virtual": false,
       "totalTime": 16,
       "invokeCount": 1,
-      "sourceSize": 1688,
+      "sourceSize": 1035,
       "distSize": 0
     },
     {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-link.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 24
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 6
-        },
-        {
-          "name": "nuxt:tree-shake-composables:transform",
-          "transform": 2
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 1
-        }
-      ],
-      "virtual": false,
-      "totalTime": 32,
-      "invokeCount": 1,
-      "sourceSize": 10742,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-root.vue",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 4
-        },
-        {
-          "name": "vite:vue",
-          "transform": 6
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 13
-        }
-      ],
-      "virtual": false,
-      "totalTime": 23,
-      "invokeCount": 1,
-      "sourceSize": 2456,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/error.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 7
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 7,
-      "invokeCount": 1,
-      "sourceSize": 1236,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/manifest.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 4
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 4,
-      "invokeCount": 1,
-      "sourceSize": 984,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/payload.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 10
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 13
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 1
-        }
-      ],
-      "virtual": false,
-      "totalTime": 23,
-      "invokeCount": 1,
-      "sourceSize": 3767,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/preload.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 2
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 2,
-      "invokeCount": 1,
-      "sourceSize": 1600,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ready.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 2
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 2,
-      "invokeCount": 1,
-      "sourceSize": 412,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/router.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 8
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 11
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 19,
-      "invokeCount": 1,
-      "sourceSize": 5939,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/config.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 23
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "vite:define",
-          "transform": 6
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 1
-        },
-        {
-          "name": "alias",
-          "resolveId": 1
-        }
-      ],
-      "virtual": false,
-      "totalTime": 29,
-      "invokeCount": 1,
-      "sourceSize": 1574,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/entry.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 0
-        },
-        {
-          "name": "replace",
-          "transform": 1
-        },
-        {
-          "name": "vite:define",
-          "transform": 33
-        }
-      ],
-      "virtual": false,
-      "totalTime": 34,
-      "invokeCount": 1,
-      "sourceSize": 2382,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/middleware/manifest-route-rule.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 19
-        },
-        {
-          "name": "replace",
-          "transform": 0
-        },
-        {
-          "name": "unctx:transform",
-          "transform": 0
-        },
-        {
-          "name": "unctx:transform",
-          "transform": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 19,
-      "invokeCount": 1,
-      "sourceSize": 356,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/nuxt.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 6
-        },
-        {
-          "name": "replace",
-          "transform": 1
-        },
-        {
-          "name": "vite:define",
-          "transform": 17
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "alias",
-          "resolveId": 24
-        },
-        {
-          "name": "alias",
-          "resolveId": 10
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 24,
-      "invokeCount": 1,
-      "sourceSize": 7278,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/revive-payload.server.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 13
-        }
-      ],
-      "virtual": false,
-      "totalTime": 13,
-      "invokeCount": 1,
-      "sourceSize": 1177,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/router.js",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "vite:load-fallback",
-          "transform": 11
-        },
-        {
-          "name": "replace",
-          "transform": 1
-        },
-        {
-          "name": "vite:define",
-          "transform": 18
-        }
-      ],
-      "virtual": false,
-      "totalTime": 30,
-      "invokeCount": 1,
-      "sourceSize": 7126,
-      "distSize": 0
-    },
-    {
-      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/utils.js",
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/capi.js",
       "deps": [],
       "plugins": [
         {
@@ -3728,6 +4596,1260 @@
       "virtual": false,
       "totalTime": 0,
       "invokeCount": 1,
+      "sourceSize": 398,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/idle-callback.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 87
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 87,
+      "invokeCount": 1,
+      "sourceSize": 456,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/compat/vue-demi.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 10
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 112,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/client-only.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 0
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 4
+        }
+      ],
+      "virtual": false,
+      "totalTime": 2,
+      "invokeCount": 1,
+      "sourceSize": 3563,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 87
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 87,
+      "invokeCount": 1,
+      "sourceSize": 49,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/injections.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 16,
+      "invokeCount": 1,
+      "sourceSize": 103,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/island-renderer.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 17
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 17,
+      "invokeCount": 1,
+      "sourceSize": 711,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-error-page.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 18
+        },
+        {
+          "name": "vite:vue",
+          "transform": 3
+        },
+        {
+          "name": "replace",
+          "transform": 2
+        }
+      ],
+      "virtual": false,
+      "totalTime": 23,
+      "invokeCount": 1,
+      "sourceSize": 1688,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-layout.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 14
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 16,
+      "invokeCount": 1,
+      "sourceSize": 4573,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-link.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 94
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 37
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 2
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 133,
+      "invokeCount": 1,
+      "sourceSize": 10742,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/nuxt-root.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 21
+        },
+        {
+          "name": "vite:vue",
+          "transform": 5
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 83
+        }
+      ],
+      "virtual": false,
+      "totalTime": 109,
+      "invokeCount": 1,
+      "sourceSize": 2456,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/route-provider.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 96
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 100
+        }
+      ],
+      "virtual": false,
+      "totalTime": 96,
+      "invokeCount": 1,
+      "sourceSize": 1419,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/components/utils.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 95
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 99
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 95,
+      "invokeCount": 1,
+      "sourceSize": 4019,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/asyncData.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 8
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "nuxt:tree-shake-composables:transform",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 10,
+      "invokeCount": 1,
+      "sourceSize": 8145,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/chunk.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 13
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 29,
+      "invokeCount": 1,
+      "sourceSize": 889,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/component.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 6
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 2158,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/cookie.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 11
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 20
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 31,
+      "invokeCount": 1,
+      "sourceSize": 5238,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/error.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 26
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 26,
+      "invokeCount": 1,
+      "sourceSize": 1236,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/fetch.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 8,
+      "invokeCount": 1,
+      "sourceSize": 3471,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/hydrate.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 13
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 14,
+      "invokeCount": 1,
+      "sourceSize": 367,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/id.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 15
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 15,
+      "invokeCount": 1,
+      "sourceSize": 1651,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 88
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 88,
+      "invokeCount": 1,
+      "sourceSize": 1310,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/manifest.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 15
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 15,
+      "invokeCount": 1,
+      "sourceSize": 984,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/once.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 14
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 14,
+      "invokeCount": 1,
+      "sourceSize": 793,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/payload.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 22
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:define",
+          "transform": 20
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 43,
+      "invokeCount": 1,
+      "sourceSize": 3767,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/preload.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 12
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 12,
+      "invokeCount": 1,
+      "sourceSize": 1600,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ready.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 12
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 12,
+      "invokeCount": 1,
+      "sourceSize": 412,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/router.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 41
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 35
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 13
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 76,
+      "invokeCount": 1,
+      "sourceSize": 5939,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/ssr.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 11
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 12,
+      "invokeCount": 1,
+      "sourceSize": 1659,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/state.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 7
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 7,
+      "invokeCount": 1,
+      "sourceSize": 1434,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/composables/url.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 13
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 29,
+      "invokeCount": 1,
+      "sourceSize": 233,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/config.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 88
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 77
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 165,
+      "invokeCount": 1,
+      "sourceSize": 1574,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/entry.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 0
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 24
+        }
+      ],
+      "virtual": false,
+      "totalTime": 24,
+      "invokeCount": 1,
+      "sourceSize": 2382,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/index.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 22
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 31
+        }
+      ],
+      "virtual": false,
+      "totalTime": 22,
+      "invokeCount": 1,
+      "sourceSize": 263,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/middleware/manifest-route-rule.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 22
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 0
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 22,
+      "invokeCount": 1,
+      "sourceSize": 356,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/nuxt.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 25
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 70
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 108
+        },
+        {
+          "name": "alias",
+          "resolveId": 24
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 95,
+      "invokeCount": 1,
+      "sourceSize": 7278,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/plugins/revive-payload.server.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 55
+        }
+      ],
+      "virtual": false,
+      "totalTime": 55,
+      "invokeCount": 1,
+      "sourceSize": 1177,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/types.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 39,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/app/utils.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 3
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 3,
+      "invokeCount": 1,
       "sourceSize": 84,
       "distSize": 0
     },
@@ -3737,7 +5859,7 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 9
+          "transform": 51
         },
         {
           "name": "replace",
@@ -3745,9 +5867,209 @@
         }
       ],
       "virtual": false,
-      "totalTime": 9,
+      "totalTime": 51,
       "invokeCount": 1,
       "sourceSize": 1315,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/page.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 16,
+      "invokeCount": 1,
+      "sourceSize": 5949,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/plugins/router.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 53
+        },
+        {
+          "name": "replace",
+          "transform": 1
+        },
+        {
+          "name": "vite:define",
+          "transform": 59
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 2
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 2
+        }
+      ],
+      "virtual": false,
+      "totalTime": 117,
+      "invokeCount": 1,
+      "sourceSize": 7762,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/router.options.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 27
+        },
+        {
+          "name": "vite:define",
+          "transform": 169
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 196,
+      "invokeCount": 1,
+      "sourceSize": 1742,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/utils.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 23
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 23,
+      "invokeCount": 1,
+      "sourceSize": 873,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/nuxt/dist/pages/runtime/validate.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 23
+        },
+        {
+          "name": "replace",
+          "transform": 0
+        },
+        {
+          "name": "vite:define",
+          "transform": 9
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 0
+        },
+        {
+          "name": "unctx:transform",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 32,
+      "invokeCount": 1,
+      "sourceSize": 974,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/pinia/dist/pinia.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 24
+        },
+        {
+          "name": "vite:define",
+          "transform": 174
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 198,
+      "invokeCount": 1,
+      "sourceSize": 74425,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/tailwindcss/tailwind.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 26
+        },
+        {
+          "name": "vite:css",
+          "transform": 80
+        }
+      ],
+      "virtual": false,
+      "totalTime": 106,
+      "invokeCount": 1,
+      "sourceSize": 61,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/node_modules/tailwindcss/tailwind.css?inline&used",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 0
+        },
+        {
+          "name": "vite:css",
+          "transform": 80
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 80,
+      "invokeCount": 1,
+      "sourceSize": 61,
       "distSize": 0
     },
     {
@@ -3756,17 +6078,67 @@
       "plugins": [
         {
           "name": "vite:load-fallback",
-          "transform": 94
+          "transform": 22
         },
         {
           "name": "vite:define",
-          "transform": 7
+          "transform": 13
         }
       ],
       "virtual": false,
-      "totalTime": 101,
+      "totalTime": 35,
       "invokeCount": 1,
       "sourceSize": 3878,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/pages/index.vue",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 28
+        },
+        {
+          "name": "vite:vue",
+          "transform": 0
+        },
+        {
+          "name": "nuxt:components-loader",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 28,
+      "invokeCount": 1,
+      "sourceSize": 131,
+      "distSize": 0
+    },
+    {
+      "id": "/Users/rinseyaron/Local Dev/lesismore.nl/pages/index.vue?macro=true",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 27
+        },
+        {
+          "name": "vite:vue",
+          "transform": 0
+        },
+        {
+          "name": "nuxt:pages-macros-transform",
+          "transform": 0
+        },
+        {
+          "name": "nuxt:pages-macros-transform",
+          "transform": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 27,
+      "invokeCount": 1,
+      "sourceSize": 131,
       "distSize": 0
     },
     {
@@ -3814,7 +6186,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 1
+          "resolveId": 0
         }
       ],
       "virtual": true,
@@ -3852,6 +6224,10 @@
       "plugins": [
         {
           "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
           "resolveId": 0
         },
         {
@@ -3860,17 +6236,17 @@
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 1
         },
         {
           "name": "ssr-styles",
-          "resolveId": 3
+          "resolveId": 2
         }
       ],
       "virtual": true,
       "totalTime": 0,
-      "invokeCount": 37,
-      "sourceSize": 0,
+      "invokeCount": 2,
+      "sourceSize": 124,
       "distSize": 0
     },
     {
@@ -3918,7 +6294,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 1
         }
       ],
       "virtual": true,
@@ -3928,7 +6304,7 @@
       "distSize": 0
     },
     {
-      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/middleware.mjs",
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/layouts.mjs",
       "deps": [],
       "plugins": [
         {
@@ -3951,7 +6327,34 @@
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 2,
-      "sourceSize": 236,
+      "sourceSize": 132,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/middleware.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 2
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 362,
       "distSize": 0
     },
     {
@@ -4003,8 +6406,52 @@
           "resolveId": 0
         },
         {
-          "name": "alias",
-          "resolveId": 3
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
         },
         {
           "name": "alias",
@@ -4012,6 +6459,73 @@
         },
         {
           "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 1056,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/pages.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
           "resolveId": 0
         },
         {
@@ -4026,7 +6540,7 @@
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 2,
-      "sourceSize": 1056,
+      "sourceSize": 53,
       "distSize": 0
     },
     {
@@ -4067,7 +6581,7 @@
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 1
         },
         {
           "name": "alias",
@@ -4102,13 +6616,13 @@
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 1
         }
       ],
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 2,
-      "sourceSize": 636,
+      "sourceSize": 805,
       "distSize": 0
     },
     {
@@ -4129,13 +6643,67 @@
         },
         {
           "name": "alias",
-          "resolveId": 3
+          "resolveId": 1
         }
       ],
       "virtual": true,
       "totalTime": 0,
       "invokeCount": 2,
       "sourceSize": 119,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/router.options.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 2
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 264,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/routes.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 2
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 477,
       "distSize": 0
     },
     {
@@ -4163,6 +6731,45 @@
       "totalTime": 0,
       "invokeCount": 2,
       "sourceSize": 17,
+      "distSize": 0
+    },
+    {
+      "id": "virtual:nuxt:/Users/rinseyaron/Local Dev/lesismore.nl/.nuxt/vue-router-stub.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "virtual",
+          "transform": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 1
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "virtual",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 2
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 27,
       "distSize": 0
     }
   ]
