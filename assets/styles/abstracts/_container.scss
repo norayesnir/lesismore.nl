@@ -1,7 +1,12 @@
 .grid-container {
-  --spacing: 16px;
-  --overflow: 100px;
+  --spacing: 8px; // Space between the container and the screen
+  --overflow: 100px; // Width of the overflow area
   --content-size: calc(1440px + (var(--spacing) * 2));
+
+  div:not(.grid-container-screen):not(.grid-container-overflow) {
+    grid-column: content-start / content-end;
+    @apply px-2;
+  }
 
   @apply w-full grid;
   grid-template-columns:
@@ -9,16 +14,17 @@
     [content-end] 1fr [overflow-end] 1fr [screen-end];
 
   &-screen {
-    grid-column: screen-start / overflow-start;
+    grid-column: screen-start / screen-end;
+    width: 100%;
   }
 
   &-overflow {
-    grid-column: overflow-start / content-start;
+    grid-column: overflow-start / overflow-end;
   }
 
   &-content {
     grid-column: content-start / content-end;
-    @apply px-6;
+    @apply px-2;
   }
 }
 

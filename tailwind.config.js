@@ -86,6 +86,7 @@ export default {
         20: "#d7d6d7",
         10: "#ebebeb",
       },
+      transparent: "transparent",
     },
     fontFamily: {
       heading: ["Comfortaa", "sans-serif"],

@@ -86,16 +86,16 @@ const ENC_BACKTICK_RE = /%60/gi;
 const ENC_PIPE_RE = /%7c/gi;
 const ENC_SPACE_RE = /%20/gi;
 const ENC_SLASH_RE = /%2f/gi;
-function encode(text) {
+function encode$1(text) {
   return encodeURI("" + text).replace(ENC_PIPE_RE, "|");
 }
 function encodeQueryValue(input) {
-  return encode(typeof input === "string" ? input : JSON.stringify(input)).replace(PLUS_RE, "%2B").replace(ENC_SPACE_RE, "+").replace(HASH_RE, "%23").replace(AMPERSAND_RE, "%26").replace(ENC_BACKTICK_RE, "`").replace(ENC_CARET_RE, "^").replace(SLASH_RE, "%2F");
+  return encode$1(typeof input === "string" ? input : JSON.stringify(input)).replace(PLUS_RE, "%2B").replace(ENC_SPACE_RE, "+").replace(HASH_RE, "%23").replace(AMPERSAND_RE, "%26").replace(ENC_BACKTICK_RE, "`").replace(ENC_CARET_RE, "^").replace(SLASH_RE, "%2F");
 }
 function encodeQueryKey(text) {
   return encodeQueryValue(text).replace(EQUAL_RE, "%3D");
 }
-function decode(text = "") {
+function decode$1(text = "") {
   try {
     return decodeURIComponent("" + text);
   } catch {
@@ -103,13 +103,13 @@ function decode(text = "") {
   }
 }
 function decodePath(text) {
-  return decode(text.replace(ENC_SLASH_RE, "%252F"));
+  return decode$1(text.replace(ENC_SLASH_RE, "%252F"));
 }
 function decodeQueryKey(text) {
-  return decode(text.replace(PLUS_RE, " "));
+  return decode$1(text.replace(PLUS_RE, " "));
 }
 function decodeQueryValue(text) {
-  return decode(text.replace(PLUS_RE, " "));
+  return decode$1(text.replace(PLUS_RE, " "));
 }
 
 function parseQuery(parametersString = "") {
@@ -320,6 +320,138 @@ function stringifyParsedURL(parsed) {
   const host = parsed.host || "";
   const proto = parsed.protocol || parsed[protocolRelative] ? (parsed.protocol || "") + "//" : "";
   return proto + auth + host + pathname + search + hash;
+}
+
+const fieldContentRegExp = /^[\u0009\u0020-\u007E\u0080-\u00FF]+$/;
+function parse(str, options) {
+  if (typeof str !== "string") {
+    throw new TypeError("argument str must be a string");
+  }
+  const obj = {};
+  const opt = options || {};
+  const dec = opt.decode || decode;
+  let index = 0;
+  while (index < str.length) {
+    const eqIdx = str.indexOf("=", index);
+    if (eqIdx === -1) {
+      break;
+    }
+    let endIdx = str.indexOf(";", index);
+    if (endIdx === -1) {
+      endIdx = str.length;
+    } else if (endIdx < eqIdx) {
+      index = str.lastIndexOf(";", eqIdx - 1) + 1;
+      continue;
+    }
+    const key = str.slice(index, eqIdx).trim();
+    if (void 0 === obj[key]) {
+      let val = str.slice(eqIdx + 1, endIdx).trim();
+      if (val.codePointAt(0) === 34) {
+        val = val.slice(1, -1);
+      }
+      obj[key] = tryDecode(val, dec);
+    }
+    index = endIdx + 1;
+  }
+  return obj;
+}
+function serialize(name, value, options) {
+  const opt = options || {};
+  const enc = opt.encode || encode;
+  if (typeof enc !== "function") {
+    throw new TypeError("option encode is invalid");
+  }
+  if (!fieldContentRegExp.test(name)) {
+    throw new TypeError("argument name is invalid");
+  }
+  const encodedValue = enc(value);
+  if (encodedValue && !fieldContentRegExp.test(encodedValue)) {
+    throw new TypeError("argument val is invalid");
+  }
+  let str = name + "=" + encodedValue;
+  if (void 0 !== opt.maxAge && opt.maxAge !== null) {
+    const maxAge = opt.maxAge - 0;
+    if (Number.isNaN(maxAge) || !Number.isFinite(maxAge)) {
+      throw new TypeError("option maxAge is invalid");
+    }
+    str += "; Max-Age=" + Math.floor(maxAge);
+  }
+  if (opt.domain) {
+    if (!fieldContentRegExp.test(opt.domain)) {
+      throw new TypeError("option domain is invalid");
+    }
+    str += "; Domain=" + opt.domain;
+  }
+  if (opt.path) {
+    if (!fieldContentRegExp.test(opt.path)) {
+      throw new TypeError("option path is invalid");
+    }
+    str += "; Path=" + opt.path;
+  }
+  if (opt.expires) {
+    if (!isDate(opt.expires) || Number.isNaN(opt.expires.valueOf())) {
+      throw new TypeError("option expires is invalid");
+    }
+    str += "; Expires=" + opt.expires.toUTCString();
+  }
+  if (opt.httpOnly) {
+    str += "; HttpOnly";
+  }
+  if (opt.secure) {
+    str += "; Secure";
+  }
+  if (opt.priority) {
+    const priority = typeof opt.priority === "string" ? opt.priority.toLowerCase() : opt.priority;
+    switch (priority) {
+      case "low":
+        str += "; Priority=Low";
+        break;
+      case "medium":
+        str += "; Priority=Medium";
+        break;
+      case "high":
+        str += "; Priority=High";
+        break;
+      default:
+        throw new TypeError("option priority is invalid");
+    }
+  }
+  if (opt.sameSite) {
+    const sameSite = typeof opt.sameSite === "string" ? opt.sameSite.toLowerCase() : opt.sameSite;
+    switch (sameSite) {
+      case true:
+        str += "; SameSite=Strict";
+        break;
+      case "lax":
+        str += "; SameSite=Lax";
+        break;
+      case "strict":
+        str += "; SameSite=Strict";
+        break;
+      case "none":
+        str += "; SameSite=None";
+        break;
+      default:
+        throw new TypeError("option sameSite is invalid");
+    }
+  }
+  return str;
+}
+function isDate(val) {
+  return Object.prototype.toString.call(val) === "[object Date]" || val instanceof Date;
+}
+function tryDecode(str, decode2) {
+  try {
+    return decode2(str);
+  } catch {
+    return str;
+  }
+}
+function decode(str) {
+  return str.includes("%") ? decodeURIComponent(str) : str;
+}
+function encode(val) {
+  return encodeURIComponent(val);
 }
 
 const defaults = Object.freeze({
@@ -924,6 +1056,16 @@ function sha256base64(message) {
 function hash(object, options = {}) {
   const hashed = typeof object === "string" ? object : objectHash(object, options);
   return sha256base64(hashed).slice(0, 10);
+}
+
+function isEqual(object1, object2, hashOptions = {}) {
+  if (object1 === object2) {
+    return true;
+  }
+  if (objectHash(object1, hashOptions) === objectHash(object2, hashOptions)) {
+    return true;
+  }
+  return false;
 }
 
 const NODE_TYPES = {
@@ -1863,21 +2005,21 @@ function hasProp(obj, prop) {
   }
 }
 
-var __defProp$1 = Object.defineProperty;
-var __defNormalProp$1 = (obj, key, value) => key in obj ? __defProp$1(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __publicField$1 = (obj, key, value) => {
-  __defNormalProp$1(obj, typeof key !== "symbol" ? key + "" : key, value);
+var __defProp$2 = Object.defineProperty;
+var __defNormalProp$2 = (obj, key, value) => key in obj ? __defProp$2(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField$2 = (obj, key, value) => {
+  __defNormalProp$2(obj, typeof key !== "symbol" ? key + "" : key, value);
   return value;
 };
 class H3Error extends Error {
   constructor(message, opts = {}) {
     super(message, opts);
-    __publicField$1(this, "statusCode", 500);
-    __publicField$1(this, "fatal", false);
-    __publicField$1(this, "unhandled", false);
-    __publicField$1(this, "statusMessage");
-    __publicField$1(this, "data");
-    __publicField$1(this, "cause");
+    __publicField$2(this, "statusCode", 500);
+    __publicField$2(this, "fatal", false);
+    __publicField$2(this, "unhandled", false);
+    __publicField$2(this, "statusMessage");
+    __publicField$2(this, "data");
+    __publicField$2(this, "cause");
     if (opts.cause && !this.cause) {
       this.cause = opts.cause;
     }
@@ -1896,7 +2038,7 @@ class H3Error extends Error {
     return obj;
   }
 }
-__publicField$1(H3Error, "__h3_error__", true);
+__publicField$2(H3Error, "__h3_error__", true);
 function createError$1(input) {
   if (typeof input === "string") {
     return new H3Error(input);
@@ -2164,6 +2306,32 @@ function sanitizeStatusCode(statusCode, defaultStatusCode = 200) {
     return defaultStatusCode;
   }
   return statusCode;
+}
+
+function parseCookies(event) {
+  return parse(event.node.req.headers.cookie || "");
+}
+function getCookie(event, name) {
+  return parseCookies(event)[name];
+}
+function setCookie(event, name, value, serializeOptions) {
+  serializeOptions = { path: "/", ...serializeOptions };
+  const cookieStr = serialize(name, value, serializeOptions);
+  let setCookies = event.node.res.getHeader("set-cookie");
+  if (!Array.isArray(setCookies)) {
+    setCookies = [setCookies];
+  }
+  const _optionsHash = objectHash(serializeOptions);
+  setCookies = setCookies.filter((cookieValue) => {
+    return cookieValue && _optionsHash !== objectHash(parse(cookieValue));
+  });
+  event.node.res.setHeader("set-cookie", [...setCookies, cookieStr]);
+}
+function deleteCookie(event, name, serializeOptions) {
+  setCookie(event, name, "", {
+    ...serializeOptions,
+    maxAge: 0
+  });
 }
 function splitCookiesString(cookiesString) {
   if (Array.isArray(cookiesString)) {
@@ -2643,7 +2811,8 @@ function _normalizeNodeHeaders(nodeHeaders) {
 
 function defineEventHandler(handler) {
   if (typeof handler === "function") {
-    return Object.assign(handler, { __is_handler__: true });
+    handler.__is_handler__ = true;
+    return handler;
   }
   const _hooks = {
     onRequest: _normalizeArray(handler.onRequest),
@@ -2652,7 +2821,10 @@ function defineEventHandler(handler) {
   const _handler = (event) => {
     return _callHandler(event, handler.handler, _hooks);
   };
-  return Object.assign(_handler, { __is_handler__: true });
+  _handler.__is_handler__ = true;
+  _handler.__resolve__ = handler.handler.__resolve__;
+  _handler.__websocket__ = handler.websocket;
+  return _handler;
 }
 function _normalizeArray(input) {
   return input ? Array.isArray(input) ? input : [input] : void 0;
@@ -2700,37 +2872,46 @@ function defineLazyEventHandler(factory) {
     }
     if (!_promise) {
       _promise = Promise.resolve(factory()).then((r) => {
-        const handler = r.default || r;
-        if (typeof handler !== "function") {
+        const handler2 = r.default || r;
+        if (typeof handler2 !== "function") {
           throw new TypeError(
             "Invalid lazy handler result. It should be a function:",
-            handler
+            handler2
           );
         }
-        _resolved = toEventHandler(r.default || r);
+        _resolved = { handler: toEventHandler(r.default || r) };
         return _resolved;
       });
     }
     return _promise;
   };
-  return eventHandler((event) => {
+  const handler = eventHandler((event) => {
     if (_resolved) {
-      return _resolved(event);
+      return _resolved.handler(event);
     }
-    return resolveHandler().then((handler) => handler(event));
+    return resolveHandler().then((r) => r.handler(event));
   });
+  handler.__resolve__ = resolveHandler;
+  return handler;
 }
 const lazyEventHandler = defineLazyEventHandler;
 
 function createApp(options = {}) {
   const stack = [];
   const handler = createAppEventHandler(stack, options);
+  const resolve = createResolver(stack);
+  handler.__resolve__ = resolve;
+  const getWebsocket = cachedFn(() => websocketOptions(resolve, options));
   const app = {
-    // @ts-ignore
+    // @ts-expect-error
     use: (arg1, arg2, arg3) => use(app, arg1, arg2, arg3),
+    resolve,
     handler,
     stack,
-    options
+    options,
+    get websocket() {
+      return getWebsocket();
+    }
   };
   return app;
 }
@@ -2748,9 +2929,7 @@ function use(app, arg1, arg2, arg3) {
       normalizeLayer({ ...arg3, route: arg1, handler: arg2 })
     );
   } else if (typeof arg1 === "function") {
-    app.stack.push(
-      normalizeLayer({ ...arg2, route: "/", handler: arg1 })
-    );
+    app.stack.push(normalizeLayer({ ...arg2, handler: arg1 }));
   } else {
     app.stack.push(normalizeLayer({ ...arg1 }));
   }
@@ -2810,6 +2989,36 @@ function createAppEventHandler(stack, options) {
     }
   });
 }
+function createResolver(stack) {
+  return async (path) => {
+    let _layerPath;
+    for (const layer of stack) {
+      if (layer.route === "/" && !layer.handler.__resolve__) {
+        continue;
+      }
+      if (!path.startsWith(layer.route)) {
+        continue;
+      }
+      _layerPath = path.slice(layer.route.length) || "/";
+      if (layer.match && !layer.match(_layerPath, void 0)) {
+        continue;
+      }
+      let res = { route: layer.route, handler: layer.handler };
+      if (res.handler.__resolve__) {
+        const _res = await res.handler.__resolve__(_layerPath);
+        if (!_res) {
+          continue;
+        }
+        res = {
+          ...res,
+          ..._res,
+          route: joinURL(res.route || "/", _res.route || "/")
+        };
+      }
+      return res;
+    }
+  };
+}
 function normalizeLayer(input) {
   let handler = input.handler;
   if (handler.handler) {
@@ -2867,6 +3076,25 @@ function handleHandlerResponse(event, val, jsonSpace) {
     statusMessage: `[h3] Cannot send ${valType} as response.`
   });
 }
+function cachedFn(fn) {
+  let cache;
+  return () => {
+    if (!cache) {
+      cache = fn();
+    }
+    return cache;
+  };
+}
+function websocketOptions(evResolver, appOptions) {
+  return {
+    ...appOptions.websocket,
+    async resolve(info) {
+      const { pathname } = parseURL(info.url || "/");
+      const resolved = await evResolver(pathname);
+      return resolved?.handler?.__websocket__ || {};
+    }
+  };
+}
 
 const RouterMethods = [
   "connect",
@@ -2903,25 +3131,21 @@ function createRouter(opts = {}) {
   for (const method of RouterMethods) {
     router[method] = (path, handle) => router.add(path, handle, method);
   }
-  router.handler = eventHandler((event) => {
-    let path = event.path || "/";
+  const matchHandler = (path = "/", method = "get") => {
     const qIndex = path.indexOf("?");
     if (qIndex !== -1) {
       path = path.slice(0, Math.max(0, qIndex));
     }
     const matched = _router.lookup(path);
     if (!matched || !matched.handlers) {
-      if (opts.preemptive || opts.preemtive) {
-        throw createError$1({
+      return {
+        error: createError$1({
           statusCode: 404,
           name: "Not Found",
-          statusMessage: `Cannot find any route matching ${event.path || "/"}.`
-        });
-      } else {
-        return;
-      }
+          statusMessage: `Cannot find any route matching ${path || "/"}.`
+        })
+      };
     }
-    const method = (event.node.req.method || "get").toLowerCase();
     let handler = matched.handlers[method] || matched.handlers.all;
     if (!handler) {
       if (!_matcher) {
@@ -2942,26 +3166,58 @@ function createRouter(opts = {}) {
       }
     }
     if (!handler) {
-      if (opts.preemptive || opts.preemtive) {
-        throw createError$1({
+      return {
+        error: createError$1({
           statusCode: 405,
           name: "Method Not Allowed",
           statusMessage: `Method ${method} is not allowed on this route.`
-        });
+        })
+      };
+    }
+    return { matched, handler };
+  };
+  const isPreemptive = opts.preemptive || opts.preemtive;
+  router.handler = eventHandler((event) => {
+    const match = matchHandler(
+      event.path,
+      event.method.toLowerCase()
+    );
+    if ("error" in match) {
+      if (isPreemptive) {
+        throw match.error;
       } else {
         return;
       }
     }
-    event.context.matchedRoute = matched;
-    const params = matched.params || {};
+    event.context.matchedRoute = match.matched;
+    const params = match.matched.params || {};
     event.context.params = params;
-    return Promise.resolve(handler(event)).then((res) => {
-      if (res === void 0 && (opts.preemptive || opts.preemtive)) {
+    return Promise.resolve(match.handler(event)).then((res) => {
+      if (res === void 0 && isPreemptive) {
         return null;
       }
       return res;
     });
   });
+  router.handler.__resolve__ = async (path) => {
+    path = withLeadingSlash(path);
+    const match = matchHandler(path);
+    if ("error" in match) {
+      return;
+    }
+    let res = {
+      route: match.matched.path,
+      handler: match.handler
+    };
+    if (match.handler.__resolve__) {
+      const _res = await match.handler.__resolve__(path);
+      if (!_res) {
+        return;
+      }
+      res = { ...res, ..._res };
+    }
+    return res;
+  };
   return router;
 }
 function toNodeListener(app) {
@@ -3698,7 +3954,7 @@ function klona(x) {
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "90186163-75d8-4d18-b7a2-99920ac9c519"
+    "buildId": "ce9e3457-d4c2-40d2-bcf7-2d1238f020c3"
   }
 };
 
@@ -4992,86 +5248,163 @@ const assets = {
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"10be-n8egyE9tcb7sKGr/pYCaQ4uWqxI\"",
-    "mtime": "2024-02-25T13:30:27.833Z",
+    "mtime": "2024-02-27T16:44:56.401Z",
     "size": 4286,
     "path": "../public/favicon.ico"
   },
-  "/_nuxt/default.DzkAwaa9.js": {
+  "/_nuxt/Button.C3JcLReg.js": {
     "type": "application/javascript",
-    "etag": "\"bb-+GYGKP2iw6y4MjQTKyy5NIT9QMY\"",
-    "mtime": "2024-02-25T13:30:27.830Z",
-    "size": 187,
-    "path": "../public/_nuxt/default.DzkAwaa9.js"
+    "etag": "\"362-/nwqd6fXKOb13Jtwm0r3JJA64JQ\"",
+    "mtime": "2024-02-27T16:44:56.392Z",
+    "size": 866,
+    "path": "../public/_nuxt/Button.C3JcLReg.js"
   },
-  "/_nuxt/entry.CZUMx-QR.js": {
+  "/_nuxt/Button.f-irJQzC.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"56f-lVb7dnbG4pt2pye585WgqkGZDq0\"",
+    "mtime": "2024-02-27T16:44:56.392Z",
+    "size": 1391,
+    "path": "../public/_nuxt/Button.f-irJQzC.css"
+  },
+  "/_nuxt/Icon.Cw_fdu2Y.js": {
     "type": "application/javascript",
-    "etag": "\"24ffb-0N+4u+nzOA/sGQPmmQ6mP3e1gCQ\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 151547,
-    "path": "../public/_nuxt/entry.CZUMx-QR.js"
+    "etag": "\"5755-q+9JahMEJyJ7k5rrAzgAmmDApSE\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 22357,
+    "path": "../public/_nuxt/Icon.Cw_fdu2Y.js"
+  },
+  "/_nuxt/Icon.Dan13sfw.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"43-GIhgs9GKs+oRSbAELPylJNjc8co\"",
+    "mtime": "2024-02-27T16:44:56.392Z",
+    "size": 67,
+    "path": "../public/_nuxt/Icon.Dan13sfw.css"
+  },
+  "/_nuxt/IconCSS.CFMj6YLe.js": {
+    "type": "application/javascript",
+    "etag": "\"426-3SwQ8qNKgpUkc8XFict2Y8xJRZE\"",
+    "mtime": "2024-02-27T16:44:56.392Z",
+    "size": 1062,
+    "path": "../public/_nuxt/IconCSS.CFMj6YLe.js"
+  },
+  "/_nuxt/IconCSS.Z2BAHt_z.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"102-h9Iv/oJ6/LJjNheNG92kJMblk/8\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 258,
+    "path": "../public/_nuxt/IconCSS.Z2BAHt_z.css"
+  },
+  "/_nuxt/Logo.ClS2_EuY.js": {
+    "type": "application/javascript",
+    "etag": "\"7d-ZciIPVYRITY2BHxtV/vO7/AyvQM\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 125,
+    "path": "../public/_nuxt/Logo.ClS2_EuY.js"
+  },
+  "/_nuxt/Logo.vue.GMCPXJy_.js": {
+    "type": "application/javascript",
+    "etag": "\"74a2-5pZ6x4HN6v85+YdAFawSQnq3Rsc\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 29858,
+    "path": "../public/_nuxt/Logo.vue.GMCPXJy_.js"
+  },
+  "/_nuxt/_slug_.DaZ-l0oD.js": {
+    "type": "application/javascript",
+    "etag": "\"ee-h71Hlv9KrVXc/BkGlhdUcessYm8\"",
+    "mtime": "2024-02-27T16:44:56.392Z",
+    "size": 238,
+    "path": "../public/_nuxt/_slug_.DaZ-l0oD.js"
+  },
+  "/_nuxt/default.Bzr2RbrQ.js": {
+    "type": "application/javascript",
+    "etag": "\"d7d-NQnHQXhhio4WM48nmFBYecDXMtE\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 3453,
+    "path": "../public/_nuxt/default.Bzr2RbrQ.js"
+  },
+  "/_nuxt/entry.BIj2uWrJ.js": {
+    "type": "application/javascript",
+    "etag": "\"5901e-gwQmXCmUKUHDmxvdlGGqc4wOgsQ\"",
+    "mtime": "2024-02-27T16:44:56.394Z",
+    "size": 364574,
+    "path": "../public/_nuxt/entry.BIj2uWrJ.js"
   },
   "/_nuxt/error-404.BOwFbGAB.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"e68-hlsnPvOJNEEWVEjbQnHBf9EhOdM\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
+    "mtime": "2024-02-27T16:44:56.394Z",
     "size": 3688,
     "path": "../public/_nuxt/error-404.BOwFbGAB.css"
   },
-  "/_nuxt/error-404.DmukQL27.js": {
+  "/_nuxt/error-404.Cq7NG0yt.js": {
     "type": "application/javascript",
-    "etag": "\"19b0-xVGlt06A3TX5emyJQ9kOQN6NB+E\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 6576,
-    "path": "../public/_nuxt/error-404.DmukQL27.js"
+    "etag": "\"8fa-cJJsoqBiJoR8GB3ftTw1dmaYf80\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 2298,
+    "path": "../public/_nuxt/error-404.Cq7NG0yt.js"
+  },
+  "/_nuxt/error-500.Cbb2J1KT.js": {
+    "type": "application/javascript",
+    "etag": "\"77e-cDUmx0ScWudvc0KIZdYmINf5Zvg\"",
+    "mtime": "2024-02-27T16:44:56.393Z",
+    "size": 1918,
+    "path": "../public/_nuxt/error-500.Cbb2J1KT.js"
   },
   "/_nuxt/error-500.CzZUE1u9.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"7e0-QP983DB9m1oiDr87r1V1AYEhrfo\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
+    "mtime": "2024-02-27T16:44:56.394Z",
     "size": 2016,
     "path": "../public/_nuxt/error-500.CzZUE1u9.css"
   },
-  "/_nuxt/error-500.F7TlIDOw.js": {
+  "/_nuxt/index.DKzsDYrr.js": {
     "type": "application/javascript",
-    "etag": "\"77e-A+C3LmlVmc9weqKLXt0L8KwOaGY\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 1918,
-    "path": "../public/_nuxt/error-500.F7TlIDOw.js"
+    "etag": "\"866-pJeZ/QMBd3dV0XkXNSHjJqAU83o\"",
+    "mtime": "2024-02-27T16:44:56.394Z",
+    "size": 2150,
+    "path": "../public/_nuxt/index.DKzsDYrr.js"
   },
-  "/_nuxt/index.BP23n8Dg.js": {
+  "/_nuxt/index.Daa6vfC5.js": {
     "type": "application/javascript",
-    "etag": "\"17597-+RTJK3+9ulkahTqQI/nB4xBGWdY\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 95639,
-    "path": "../public/_nuxt/index.BP23n8Dg.js"
+    "etag": "\"f5-dxPI5zbRiZ1O4qx24un6TR9MEV4\"",
+    "mtime": "2024-02-27T16:44:56.394Z",
+    "size": 245,
+    "path": "../public/_nuxt/index.Daa6vfC5.js"
   },
-  "/_nuxt/index.D79ctkLV.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"3116-orSBdCAPbyTRD6Ikh0ndhL3y2UM\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 12566,
-    "path": "../public/_nuxt/index.D79ctkLV.css"
-  },
-  "/_nuxt/vue.f36acd1f.BCJU5X6F.js": {
+  "/_nuxt/nuxt-link.CUFEKROT.js": {
     "type": "application/javascript",
-    "etag": "\"186-9D6TtxQM0c+zK+LFuH2Eqmh1uG0\"",
-    "mtime": "2024-02-25T13:30:27.831Z",
-    "size": 390,
-    "path": "../public/_nuxt/vue.f36acd1f.BCJU5X6F.js"
+    "etag": "\"10ff-Ic0aEMTNqIX3sHkU/1omwqY015E\"",
+    "mtime": "2024-02-27T16:44:56.394Z",
+    "size": 4351,
+    "path": "../public/_nuxt/nuxt-link.CUFEKROT.js"
+  },
+  "/_nuxt/vue.f36acd1f._CkcwH75.js": {
+    "type": "application/javascript",
+    "etag": "\"181-TBQM3k063+BB/5YDpNPWmb8x3hs\"",
+    "mtime": "2024-02-27T16:44:56.394Z",
+    "size": 385,
+    "path": "../public/_nuxt/vue.f36acd1f._CkcwH75.js"
   },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-VCKVsZdB6aJ+XgWqvyl8jegcXA8\"",
-    "mtime": "2024-02-25T13:30:27.828Z",
+    "etag": "\"47-192msOEuIDGjZr4MAx3sd2QImSo\"",
+    "mtime": "2024-02-27T16:44:56.388Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/builds/meta/90186163-75d8-4d18-b7a2-99920ac9c519.json": {
+  "/_nuxt/builds/meta/ce9e3457-d4c2-40d2-bcf7-2d1238f020c3.json": {
     "type": "application/json",
-    "etag": "\"8b-A9XDEx0mClV50wWjh0CugEcUgJ0\"",
-    "mtime": "2024-02-25T13:30:27.825Z",
+    "etag": "\"8b-nYvtewL3VSN0Q+GLjvtrMsPP+xA\"",
+    "mtime": "2024-02-27T16:44:56.384Z",
     "size": 139,
-    "path": "../public/_nuxt/builds/meta/90186163-75d8-4d18-b7a2-99920ac9c519.json"
+    "path": "../public/_nuxt/builds/meta/ce9e3457-d4c2-40d2-bcf7-2d1238f020c3.json"
+  },
+  "/_nuxt/builds/meta/dev.json": {
+    "type": "application/json",
+    "etag": "\"6a-g1Y3k8soElK0QTSG8WSOCcG2ev4\"",
+    "mtime": "2024-02-27T16:44:56.384Z",
+    "size": 106,
+    "path": "../public/_nuxt/builds/meta/dev.json"
   }
 };
 
@@ -5666,5 +5999,5 @@ trapUnhandledNodeErrors();
 setupGracefulShutdown(listener, nitroApp);
 const nodeServer = {};
 
-export { $fetch as $, send as a, setResponseStatus as b, setResponseHeaders as c, useRuntimeConfig as d, eventHandler as e, getQuery as f, getResponseStatus as g, createError$1 as h, getRouteRules as i, joinURL as j, getResponseStatusText as k, hasProtocol as l, isScriptProtocol as m, defu as n, sanitizeStatusCode as o, parseURL as p, createHooks as q, parseQuery as r, setResponseHeader as s, withTrailingSlash as t, useNitroApp as u, withoutTrailingSlash as v, withQuery as w, nodeServer as x };
+export { $fetch as $, setCookie as A, getCookie as B, deleteCookie as C, getRequestHeaders as D, defuFn as E, parseQuery as F, withTrailingSlash as G, withoutTrailingSlash as H, nodeServer as I, send as a, setResponseStatus as b, setResponseHeaders as c, useRuntimeConfig as d, eventHandler as e, getQuery as f, getResponseStatus as g, createError$1 as h, getRouteRules as i, joinURL as j, getResponseStatusText as k, hasProtocol as l, isScriptProtocol as m, hash as n, defu as o, parseURL as p, sanitizeStatusCode as q, createHooks as r, setResponseHeader as s, klona as t, useNitroApp as u, parse as v, withQuery as w, getRequestHeader as x, destr as y, isEqual as z };
 //# sourceMappingURL=node-server.mjs.map

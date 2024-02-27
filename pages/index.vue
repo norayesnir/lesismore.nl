@@ -1,9 +1,5 @@
-<script lang="ts" setup></script>
-
 <template>
   <div>
-    <NuxtWelcome />
+    <h1>Les is More Homepage!</h1>
   </div>
 </template>
-
-<style lang="scss" scoped></style>
