@@ -21,8 +21,8 @@ const menuStore = useMenuStore();
       />
       <Button
         :data="data.Navigation.cta"
-        class="col-span-2 lg:flex"
-        :class="menuStore.state ? '' : 'hidden'"
+        class="col-span-2 lg:!flex"
+        :class="menuStore.state ? '' : '!hidden'"
       />
     </div>
   </div>
