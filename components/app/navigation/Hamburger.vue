@@ -1,3 +1,22 @@
+<script setup lang="ts">
+import { useMenuStore } from "@/stores/navigation/hamburgerStore";
+const menuStore = useMenuStore();
+
+const closeMenuOnResize = () => {
+  if (window.innerWidth > 975) {
+    menuStore.close();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("resize", closeMenuOnResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", closeMenuOnResize);
+});
+</script>
+
 <template>
   <div class="lg:hidden" @click="menuStore.toggle()">
     <Icon
@@ -6,22 +25,3 @@
     />
   </div>
 </template>
-
-<script setup lang="ts">
-import { useMenuStore } from "@/stores/navigation/hamburgerStore";
-const menuStore = useMenuStore();
-
-// const closeMenuOnResize = () => {
-//   if (window.innerWidth > 975) {
-//     close();
-//   }
-// };
-
-// onMounted(() => {
-//   window.addEventListener("resize", closeMenuOnResize);
-// });
-
-// onUnmounted(() => {
-//   window.removeEventListener("resize", closeMenuOnResize);
-// });
-</script>
