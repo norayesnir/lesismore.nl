@@ -19,8 +19,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  build: {
-    transpile: ["@apollo/client", "tslib", "@headlessui/vue"],
-  },
 });

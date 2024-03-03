@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
-import { GetRoutesFragment } from "./get-routes";
-import { MenuCTAFragment } from "./get-cta";
+import { GetRoutesFragment } from "./getRoutes";
+import { MenuCTAFragment } from "./getCta";
 
 export const GetMainNavigation = gql`
   query {

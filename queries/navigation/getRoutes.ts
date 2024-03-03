@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { MenuItemFragment } from "./menu-item-fragment";
+import { MenuItemFragment } from "./getMenuItem";
 
 export const GetRoutesFragment = gql`
   fragment GetRoutesFields on MenuItem {
