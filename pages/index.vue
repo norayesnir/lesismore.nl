@@ -1,5 +1,6 @@
 <template>
   <div>
-    <h1>Les is More Homepage!</h1>
+    <RenderColors />
+    <AppHero />
   </div>
 </template>

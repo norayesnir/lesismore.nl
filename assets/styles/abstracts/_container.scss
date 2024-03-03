@@ -3,7 +3,7 @@
   --overflow: 100px; // Width of the overflow area
   --content-size: calc(1440px + (var(--spacing) * 2));
 
-  div:not(.grid-container-screen):not(.grid-container-overflow) {
+  > div:not(.grid-container-screen):not(.grid-container-overflow) {
     grid-column: content-start / content-end;
     @apply px-2;
   }

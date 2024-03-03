@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useMenuStore } from "@/stores/navigation/hamburgerStore";
-import { GetMainNavigation } from "@/queries/main-navigation/get-main-navigation";
+import { GetMainNavigation } from "@/queries/navigation";
 const response = await useAsyncQuery(GetMainNavigation);
 const data = ref(response.data);
 
@@ -27,3 +27,4 @@ const menuStore = useMenuStore();
     </div>
   </div>
 </template>
+~/queries/navigation

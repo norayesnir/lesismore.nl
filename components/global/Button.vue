@@ -22,22 +22,23 @@ const iconAlignment =
 <template>
   <NuxtLink
     class="btn"
-    :class="(style, iconAlignment)"
+    :class="[style, iconAlignment]"
     :to="`/${props.data.link_to_page[0]._slug}`"
   >
     <Icon v-if="props.data.icon_shortcode" :name="props.data.icon_shortcode" />
-    <img v-else :src="props.data.icon.url" />
+    <img v-else-if="props.data.icon && props.data.icon.url" :src="props.data.icon.url" />
     {{ props.data.title }}
   </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
 .btn {
-  --primary: #87a68f;
   --alt: #ffffff;
-  --secondary: #628364;
+  --primary: #e6bdaa;
+  --secondary: #ca9a89;
 
-  @apply py-3 
+  @apply flex
+    py-2
     px-8 
     border-2 
     justify-center 
@@ -56,14 +57,29 @@ const iconAlignment =
       border-[var(--secondary)];
   }
 
-  &--secondary {
-    --primary: #fc958c;
-    --secondary: #9d3e42;
+  &--tuftBush {
+    --primary: #ca9a89;
+    --secondary: #ae7767;
   }
 
-  &--cta {
+  &--summerGreen {
+    --primary: #628364;
+    --secondary: #3e603c;
+  }
+
+  &--jaffa {
     --primary: #f38145;
-    --secondary: #762c1e;
+    --secondary: #b85732;
+  }
+
+  &--geraldine {
+    --primary: #fc958c;
+    --secondary: #d06d6a;
+  }
+
+  &--cinderella {
+    --primary: #d39f9f;
+    --secondary: #b6797a;
   }
 
   &--white {
