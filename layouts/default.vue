@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppNavigationMenu class="z-10" />
-    <div class="relative grid-container pt-[80px] md:pt-[150px]">
+    <div class="relative grid-container md:pt-[72px] h-[200vh]">
       <slot />
     </div>
   </div>

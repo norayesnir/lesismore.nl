@@ -38,6 +38,7 @@ const iconAlignment =
   --secondary: #ca9a89;
 
   @apply flex
+    w-fit
     py-2
     px-8 
     border-2 
