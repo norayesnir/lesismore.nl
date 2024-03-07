@@ -6,41 +6,41 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-heading font-bold;
+	@apply font-heading font-bold;
 }
 
 h1,
 .h1 {
-  @apply text-5xl leading-snug;
+	@apply text-5xl leading-snug;
 }
 
 h2,
 .h2 {
-  @apply text-4xl leading-snug;
+	@apply text-4xl leading-snug;
 }
 
 h3,
 .h3 {
-  @apply text-3xl leading-snug;
+	@apply text-3xl leading-snug;
 }
 
 h4,
 .h4 {
-  @apply text-2xl leading-snug;
+	@apply text-2xl leading-snug;
 }
 
 h5,
 .h5 {
-  @apply text-xl font-normal leading-snug;
+	@apply text-xl font-normal leading-snug;
 }
 
 h6,
 .h6 {
-  @apply text-lg font-normal leading-snug;
+	@apply text-lg font-normal leading-snug;
 }
 
 body {
-  @apply font-body font-medium;
+	@apply font-body font-medium;
 }
 
 address,
@@ -59,6 +59,5 @@ p,
 pre,
 table,
 ul {
-  margin: 0;
-  line-height: 1.75;
+	@apply m-0 leading-[1.75];
 }

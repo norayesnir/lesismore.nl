@@ -1,24 +1,23 @@
 <script lang="ts" setup>
-import { GetLogo } from "@/queries/logo/get-logo";
-import { useMenuStore } from "@/stores/navigation/hamburgerStore";
-const menuStore = useMenuStore();
+	import { useMenuStore } from "@/stores/navigation/hamburgerStore";
+	const menuStore = useMenuStore();
 
-const props = defineProps({
-  icon: Boolean,
-});
-
-const response = await useAsyncQuery(GetLogo);
-const data = ref(response.data);
+	const props = defineProps({
+		data: {
+			type: Object,
+			required: true,
+		},
+	});
 </script>
 
 <template>
-  <NuxtLink to="/">
-    <img
-      v-if="data"
-      @click="menuStore.close()"
-      :src="icon ? data.Logo.icon.url : data.Logo.logo.url"
-      :alt="data.Logo.title"
-      class="h-full"
-    />
-  </NuxtLink>
+	<NuxtLink to="/">
+		<img
+			v-if="props.data && props.data.url"
+			@click="menuStore.close()"
+			class="h-full max-w-[190px] xl:max-w-[250px] cursor-pointer"
+			:src="props.data.url"
+			:alt="props.data.caption"
+		/>
+	</NuxtLink>
 </template>
