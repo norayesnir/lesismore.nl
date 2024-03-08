@@ -9,10 +9,11 @@
 		slug: currentRoute,
 	});
 	const data = ref(response.data);
+	console.log(data.value);
 </script>
 
 <template>
 	<div :class="`page-${(route.params.slug as string)}`">
-		<h1>{{ data.Page.title }}</h1>
+		<AppContentImage v-if="data.Page.hero" :data="data.Page.hero" />
 	</div>
 </template>

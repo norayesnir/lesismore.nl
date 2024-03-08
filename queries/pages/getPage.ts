@@ -6,8 +6,34 @@ export const GetPage = gql`
 			_id
 			_slug
 			title
-			stack {
-				__typename
+			hero {
+				_id
+				title
+				text
+				image {
+					_id
+					url
+				}
+				buttons {
+					_id
+					title
+					link_to_page {
+						__typename
+						_id
+						_slug
+					}
+					color
+					type
+					icon_shortcode
+					icon {
+						_id
+						url
+					}
+					alignment
+				}
+				background_color
+				alignment
+				rounding
 			}
 		}
 	}
