@@ -28,13 +28,7 @@
 				class="col-span-2 col-start-1 row-start-3 lg:!flex"
 				:class="menuStore.state ? '' : '!hidden'"
 			/>
-			<AppNavigationSocials
-				:class="
-					menuStore.state
-						? 'block col-start-2 row-start-2 row-span-3'
-						: 'absolute z-10 hidden lg:block top-[150px]'
-				"
-			/>
+			<slot />
 		</div>
 	</div>
 </template>
