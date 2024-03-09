@@ -6,13 +6,16 @@ export const GetPage = gql`
 			_id
 			_slug
 			title
+			__typename
 			hero {
 				_id
+				__typename
 				title
 				text
 				image {
 					_id
 					url
+					caption
 				}
 				buttons {
 					_id
@@ -34,6 +37,16 @@ export const GetPage = gql`
 				background_color
 				alignment
 				rounding
+			}
+
+			stack {
+				__typename
+				... on ContentBlock {
+					_id
+				}
+				... on Article {
+					_id
+				}
 			}
 		}
 	}
