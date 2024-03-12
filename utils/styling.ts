@@ -3,8 +3,15 @@ export function rounding(rounding: string): string | null {
 	return corners.includes(rounding) ? `rounding-${rounding}` : null;
 }
 
-export function alignment(alignment: string): string | null {
-	return alignment === "right" ? "order-1" : null;
+export function alignment(
+	alignment: string,
+	grid?: boolean
+): string | null {
+	if (grid === true) {
+		return alignment === "flipped" ? "order-1" : null;
+	} else {
+		return alignment === "flipped" ? "reverse" : null;
+	}
 }
 
 export function background(
@@ -12,6 +19,12 @@ export function background(
 	dropshadow: boolean
 ): string | null {
 	if (dropshadow)
-		return background ? `bg-${background} drop-shadow-2xl` : "";
-	return background ? `bg-${background}` : null;
+		return background
+			? `bg-${background} ${
+					background === "black" ? "text-white" : ""
+			  } drop-shadow-2xl`
+			: "";
+	return background
+		? `bg-${background} ${background === "black" ? "text-white" : ""}`
+		: null;
 }

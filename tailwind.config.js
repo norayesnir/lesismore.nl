@@ -116,10 +116,33 @@ export default {
 			body: ["Poppins", "sans-serif"],
 		},
 	},
-	// plugins: [],
+	plugins: [
+		function ({ addUtilities }) {
+			const newUtilities = {
+				".reverse": {
+					display: "flex",
+				},
+				".reverse.flex-col": {
+					flexDirection: "column-reverse",
+				},
+				".reverse.flex-row": {
+					flexDirection: "row-reverse",
+				},
+			};
+
+			addUtilities(newUtilities);
+		},
+	],
 	safelist: [
+		// ? Flex direction
 		"flex-row",
 		"flex-row-reverse",
+
+		// ? Grid columns
+		"grid-cols-1",
+		"grid-cols-2",
+		"grid-cols-3",
+		"order-1",
 		{
 			// ? Backgrounds
 			pattern: /^bg-.*/,

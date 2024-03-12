@@ -11,7 +11,7 @@
 	const style = [
 		background(props.data.background_color, true),
 		rounding(props.data.rounding),
-		alignment(props.data.alignment),
+		alignment(props.data.alignment, true),
 	]
 		.filter(Boolean)
 		.join(" ");

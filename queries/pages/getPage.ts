@@ -41,7 +41,7 @@ export const GetPage = gql`
 
 			stack {
 				__typename
-				... on ContentBlock {
+				... on Row {
 					_id
 				}
 				... on Article {

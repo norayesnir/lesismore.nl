@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { GetPage } from "~/queries/pages/getPage";
-	import { GetContentBlock } from "~/queries/content-items/content-block";
+	import { GetRows } from "~/queries/content-items/rows";
 
 	const route = useRoute();
 	const currentRoute = route.params.slug as string;
@@ -10,33 +10,22 @@
 	});
 	const data = ref(response.data);
 
-	// for (const block of data.value.Page.stack) {
-	// 	if (block.__typename === "ContentBlock") {
-	// 		const contentBlock = await useAsyncQuery(GetContentBlock, {
-	// 			id: block._id,
-	// 		});
-	// 		const contentBlockData = ref(contentBlock.data);
-	// 		console.log(
-	// 			contentBlockData.value.ContentBlock.__typename,
-	// 			contentBlockData.value.ContentBlock.colunm[0].title
-	// 		);
-	// 	}
-	// }
-
-	const contentBlocksData = ref<any[]>([]);
+	const rowsData = ref<any[]>([]);
 
 	(async () => {
-		const promises = data.value.Page.stack.map(async (block: any) => {
-			if (block.__typename === "ContentBlock") {
-				const contentBlock = await useAsyncQuery(GetContentBlock, {
-					id: block._id,
+		const promises = data.value.Page.stack.map(async (row: any) => {
+			if (row.__typename === "Row") {
+				const rows = await useAsyncQuery(GetRows, {
+					id: row._id,
 				});
-				return contentBlock.data;
+				return rows.data;
 			}
 		});
 
-		contentBlocksData.value = await Promise.all(promises.filter(Boolean));
+		rowsData.value = await Promise.all(promises.filter(Boolean));
 	})();
+
+	console.log(rowsData.value);
 </script>
 
 <template>
@@ -44,13 +33,11 @@
 		<AppContentImage v-if="data.Page.hero" :data="data.Page.hero" />
 
 		<div class="py-20">
-			<h3>Content Block</h3>
-			<AppContentBlock
-				v-if="contentBlocksData && contentBlocksData.length > 0"
-				v-for="block in contentBlocksData.filter(Boolean)"
+			<AppRows
+				v-if="rowsData && rowsData.length"
+				v-for="block in rowsData.filter(Boolean)"
 				:data="block"
 			/>
-			<!-- <AppContentBlock v-if="contentBlocks" :data="contentBlocks" /> -->
 		</div>
 	</div>
 </template>
