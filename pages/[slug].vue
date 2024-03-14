@@ -24,8 +24,6 @@
 
 		rowsData.value = await Promise.all(promises.filter(Boolean));
 	})();
-
-	console.log(rowsData.value);
 </script>
 
 <template>
