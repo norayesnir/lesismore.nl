@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'Button': typeof import("../components/Button.vue")['default']
     'Logo': typeof import("../components/Logo.vue")['default']
+    'AppCTA': typeof import("../components/app/CTA.vue")['default']
     'AppColumn': typeof import("../components/app/Column.vue")['default']
     'AppContent': typeof import("../components/app/Content.vue")['default']
     'AppContentImage': typeof import("../components/app/ContentImage.vue")['default']
@@ -37,6 +38,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyButton': typeof import("../components/Button.vue")['default']
     'LazyLogo': typeof import("../components/Logo.vue")['default']
+    'LazyAppCTA': typeof import("../components/app/CTA.vue")['default']
     'LazyAppColumn': typeof import("../components/app/Column.vue")['default']
     'LazyAppContent': typeof import("../components/app/Content.vue")['default']
     'LazyAppContentImage': typeof import("../components/app/ContentImage.vue")['default']
@@ -74,6 +76,7 @@ declare module 'vue' {
 
 export const Button: typeof import("../components/Button.vue")['default']
 export const Logo: typeof import("../components/Logo.vue")['default']
+export const AppCTA: typeof import("../components/app/CTA.vue")['default']
 export const AppColumn: typeof import("../components/app/Column.vue")['default']
 export const AppContent: typeof import("../components/app/Content.vue")['default']
 export const AppContentImage: typeof import("../components/app/ContentImage.vue")['default']
@@ -108,6 +111,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyButton: typeof import("../components/Button.vue")['default']
 export const LazyLogo: typeof import("../components/Logo.vue")['default']
+export const LazyAppCTA: typeof import("../components/app/CTA.vue")['default']
 export const LazyAppColumn: typeof import("../components/app/Column.vue")['default']
 export const LazyAppContent: typeof import("../components/app/Content.vue")['default']
 export const LazyAppContentImage: typeof import("../components/app/ContentImage.vue")['default']

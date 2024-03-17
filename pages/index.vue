@@ -16,19 +16,20 @@
 			.filter((content: any) => content._id && content.__typename)
 			.map((content: any) => [content._id, content.__typename])
 	);
+
+	console.log(getContent.value);
 </script>
 
 <template>
-	<div>
+	<div class="grid-container">
 		<AppHero />
 
-		<template v-for="content in getContent">
-			<component
-				class="py-20"
-				:v-if="content[0] && content[1]"
-				v-bind:is="`App${content[1]}`"
-				:id="content[0]"
-			/>
-		</template>
+		<component
+			v-for="content in getContent"
+			class="py-20"
+			:v-if="content[0] && content[1]"
+			v-bind:is="`App${content[1]}`"
+			:id="content[0]"
+		/>
 	</div>
 </template>

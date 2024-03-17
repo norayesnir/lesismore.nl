@@ -6,16 +6,16 @@
 
 <template>
 	<div>
-		<AppNavigationMenu class="z-10">
+		<AppNavigationMenu>
 			<AppNavigationSocials
 				:class="
 					menuStore.state
 						? 'block col-start-2 row-start-2 row-span-3'
-						: 'absolute z-10 hidden lg:block top-[150px]'
+						: 'hidden'
 				"
 			/>
 		</AppNavigationMenu>
-		<div class="relative grid-container md:pt-[72px] h-[200vh]">
+		<div class="relative md:pt-[72px] h-[200vh]">
 			<slot />
 		</div>
 	</div>
