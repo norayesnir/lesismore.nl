@@ -22,7 +22,9 @@
 		v-if="data.Hero"
 		class="relative flex flex-col-reverse grid-cols-12 md:gap-4 md:grid"
 	>
-		<div class="hidden lg:block"></div>
+		<AppNavigationSocials
+			class="sticky top-[150px] hidden lg:block -z-[101]"
+		/>
 		<div
 			:class="style"
 			class="flex flex-col grid-cols-11 col-span-10 gap-4 md:gap-8 p-4 md:grid rounded-xl md:rounded-[32px] md:rounded-tl-[128px] md:rounded-br-[128px] py-10 lg:py-20"

@@ -44,6 +44,10 @@ export const GetPage = gql`
 				... on Row {
 					_id
 				}
+
+				... on CTA {
+					_id
+				}
 				... on Article {
 					_id
 				}
