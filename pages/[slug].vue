@@ -8,34 +8,27 @@
 	const response = await useAsyncQuery(GetPage, {
 		slug: currentRoute,
 	});
+
 	const data = ref(response.data);
 
-	const rowsData = ref<any[]>([]);
-
-	(async () => {
-		const promises = data.value.Page.stack.map(async (row: any) => {
-			if (row.__typename === "Row") {
-				const rows = await useAsyncQuery(GetRows, {
-					id: row._id,
-				});
-				return rows.data;
-			}
-		});
-
-		rowsData.value = await Promise.all(promises.filter(Boolean));
-	})();
+	const getContent = ref(
+		data.value?.Page.stack
+			.filter((content: any) => content._id && content.__typename)
+			.map((content: any) => [content._id, content.__typename])
+	);
 </script>
 
 <template>
 	<div :class="`page-${(route.params.slug as string)}`">
 		<AppContentImage v-if="data.Page.hero" :data="data.Page.hero" />
 
-		<div class="py-20">
-			<AppRows
-				v-if="rowsData && rowsData.length"
-				v-for="block in rowsData.filter(Boolean)"
-				:data="block"
+		<template v-for="content in getContent">
+			<component
+				class="py-20 wow"
+				:v-if="content[0] && content[1]"
+				v-bind:is="`App${content[1]}`"
+				:id="content[0]"
 			/>
-		</div>
+		</template>
 	</div>
 </template>
