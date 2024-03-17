@@ -1,0 +1,7 @@
+.rounding {
+	@each $corner in tl, tr, bl, br {
+		&-#{$corner} {
+			@apply rounded-#{$corner}-[128px];
+		}
+	}
+}
