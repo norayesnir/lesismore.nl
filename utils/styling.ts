@@ -19,6 +19,7 @@ export function background(
 	dropshadow: boolean
 ): string | null {
 	if (background === "none") return null;
+
 	if (dropshadow)
 		return background
 			? `bg-${background} ${

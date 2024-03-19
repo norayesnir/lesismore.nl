@@ -24,7 +24,8 @@
 				:class="menuStore.state ? '' : 'hidden'"
 			/>
 			<Button
-				:data="data.Navigation.cta"
+				v-if="data.Navigation.cta && data.Navigation.cta.length"
+				:data="data.Navigation.cta[0]"
 				class="col-span-2 col-start-1 row-start-3 lg:!flex"
 				:class="menuStore.state ? '' : '!hidden'"
 			/>
