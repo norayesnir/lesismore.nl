@@ -20,14 +20,11 @@
 <template>
 	<div
 		v-if="data.Hero"
-		class="relative flex flex-col-reverse grid-cols-12 md:gap-4 md:grid"
+		class="relative flex flex-col-reverse items-center grid-cols-12 md:gap-4 md:grid"
 	>
-		<AppNavigationSocials
-			class="sticky top-[150px] hidden lg:block -z-[101]"
-		/>
 		<div
 			:class="style"
-			class="flex flex-col grid-cols-11 col-span-10 gap-4 md:gap-8 p-4 md:grid rounded-xl md:rounded-[32px] md:rounded-tl-[128px] md:rounded-br-[128px] py-10 lg:py-20"
+			class="flex flex-col grid-cols-11 col-span-10 xl:col-span-11 gap-4 md:gap-8 p-4 md:grid rounded-xl md:rounded-[32px] md:rounded-tl-[128px] md:rounded-br-[128px] py-10 lg:py-20"
 		>
 			<div class="flex flex-col col-span-6 col-start-2 gap-6 md:gap-8">
 				<h1 class="h2 hyphens-auto lg:hyphens-none lg:h1">
@@ -45,7 +42,7 @@
 		</div>
 		<NuxtImg
 			:src="data.Hero.image.url"
-			class="md:absolute px-10 md:px-0 right-0 bottom-0 md:h-[calc(100%+64px)]"
+			class="md:absolute my-auto px-10 md:px-0 right-0 bottom-0 md:max-h-[calc(100%+64px)] rounded-[32px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[600px]"
 		/>
 	</div>
 </template>

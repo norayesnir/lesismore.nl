@@ -6,7 +6,7 @@
 
 <template>
 	<div>
-		<AppNavigationMenu>
+		<AppNavigationMenu class="relative z-[100]">
 			<AppNavigationSocials
 				:class="
 					menuStore.state
@@ -15,6 +15,7 @@
 				"
 			/>
 		</AppNavigationMenu>
+
 		<div class="relative md:pt-[72px] h-[200vh]">
 			<slot />
 		</div>

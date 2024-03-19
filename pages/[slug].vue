@@ -24,7 +24,7 @@
 
 		<template v-for="content in getContent">
 			<component
-				class="py-20 wow"
+				class="py-20"
 				:v-if="content[0] && content[1]"
 				v-bind:is="`App${content[1]}`"
 				:id="content[0]"
