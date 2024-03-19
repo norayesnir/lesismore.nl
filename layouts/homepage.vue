@@ -7,6 +7,7 @@
 
 <template>
 	<div>
+		<SpeedInsights />
 		<AppNavigationMenu class="relative z-[100]">
 			<AppSocials
 				:class="
