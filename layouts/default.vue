@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <AppNavigationMenu class="z-10" />
-    <div class="relative grid-container pt-[80px] md:pt-[150px]">
-      <slot />
-    </div>
-  </div>
+	<div>
+		<AppNavigationMenu class="z-10" />
+		<div class="relative grid-container md:pt-[72px]">
+			<slot />
+		</div>
+		<AppFooterMenu class="pt-20" />
+	</div>
 </template>
