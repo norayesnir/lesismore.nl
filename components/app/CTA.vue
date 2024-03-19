@@ -17,8 +17,6 @@
 
 	const data = ref(response.data);
 
-	console.log(data.value.CTA.quote.buttons);
-
 	const buttons = data.value.CTA.quote.buttons;
 
 	const style = [
