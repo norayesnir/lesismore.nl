@@ -26,7 +26,7 @@
 
 <template>
 	<div
-		class="flex flex-col gap-4 md:grid"
+		class="flex flex-col items-end gap-4 lg:gap-8 md:grid"
 		:class="gridColumn"
 		v-if="data.Row.column.length"
 	>
