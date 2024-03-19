@@ -1,3 +1,7 @@
+<script>
+	import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+</script>
+
 <template>
 	<div>
 		<AppNavigationMenu class="z-10" />
