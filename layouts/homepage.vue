@@ -7,7 +7,7 @@
 <template>
 	<div>
 		<AppNavigationMenu class="relative z-[100]">
-			<AppNavigationSocials
+			<AppSocials
 				:class="
 					menuStore.state
 						? 'block col-start-2 row-start-2 row-span-3'
@@ -16,8 +16,9 @@
 			/>
 		</AppNavigationMenu>
 
-		<div class="relative md:pt-[72px] h-[200vh]">
+		<div class="relative md:pt-[72px]">
 			<slot />
 		</div>
+		<AppFooterMenu class="pt-20" />
 	</div>
 </template>
