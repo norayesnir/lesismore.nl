@@ -1,5 +1,6 @@
 <script setup lang="ts">
 	import { useMenuStore } from "@/stores/navigation/hamburgerStore";
+	import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 	const menuStore = useMenuStore();
 </script>
