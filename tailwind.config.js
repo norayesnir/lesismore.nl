@@ -143,6 +143,12 @@ export default {
 		"grid-cols-2",
 		"grid-cols-3",
 		"order-1",
+
+		// ? Grid span
+		"col-span-3",
+		"col-span-4",
+		"col-span-5",
+
 		{
 			// ? Backgrounds
 			pattern: /^bg-.*/,
