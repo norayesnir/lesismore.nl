@@ -1,10 +1,10 @@
 <script setup lang="ts">
-	import { GetPage } from "~/queries/pages/getPage";
+	import { GetArticle } from "~/queries/blog/getArtivles";
 
 	const route = useRoute();
 	const currentRoute = route.params.slug as string;
 
-	const response = await useAsyncQuery(GetPage, {
+	const response = await useAsyncQuery(GetArticle, {
 		slug: currentRoute,
 	});
 
