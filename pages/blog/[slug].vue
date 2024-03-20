@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { GetArticle } from "~/queries/blog/getArtivles";
+	import { GetArticle } from "~/queries/blog/getArticle";
 
 	const route = useRoute();
 	const currentRoute = route.params.slug as string;
@@ -31,3 +31,4 @@
 		</template>
 	</div>
 </template>
+~/queries/blog/getArticle
