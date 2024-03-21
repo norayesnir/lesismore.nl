@@ -31,19 +31,6 @@
 			class: `col-span-${shuffleArray([3, 4, 5])[index % 3]}`,
 		}))
 	);
-
-	// watch(data, (newData) => {
-	// 	if (newData?.Articles.items) {
-	// 		const numbers = shuffleArray([1, 2, 3]);
-	// 		articles.value = newData.Articles.items.map(
-	// 			(article: any, index: number) => ({
-	// 				...article,
-	// 				// Add a random class to each article
-	// 				class: `class-${numbers[index % numbers.length]}`,
-	// 			})
-	// 		);
-	// 	}
-	// });
 </script>
 
 <template>
