@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 	import { GetArchive } from "~/queries/blog/getArchive";
-	import { ref, watch } from "vue";
 
 	interface Article {
 		_id: string;
@@ -17,18 +16,22 @@
 
 	const data = ref(response.data);
 
-	const shuffleArray = (array: number[]) => {
-		for (let i = array.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[array[i], array[j]] = [array[j], array[i]];
+	function* shuffleNumbers() {
+		const numbers = [3, 4, 5];
+		while (true) {
+			for (const number of numbers) {
+				yield number;
+			}
+			numbers.sort(() => Math.random() - 0.5);
 		}
-		return array;
-	};
+	}
+
+	const numberGenerator = shuffleNumbers();
 
 	const articles = ref<Article[]>(
-		data.value?.Articles.items.map((article: any, index: number) => ({
+		data.value?.Articles.items.map((article: any) => ({
 			...article,
-			class: `col-span-${shuffleArray([3, 4, 5])[index % 3]}`,
+			class: `col-span-${numberGenerator.next().value}`,
 		}))
 	);
 </script>
