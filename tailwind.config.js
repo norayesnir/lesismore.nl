@@ -145,9 +145,9 @@ export default {
 		"order-1",
 
 		// ? Grid span
-		"col-span-3",
-		"col-span-4",
-		"col-span-5",
+		"xl:col-span-3",
+		"xl:col-span-4",
+		"xl:col-span-5",
 
 		{
 			// ? Backgrounds

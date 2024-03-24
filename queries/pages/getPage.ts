@@ -7,6 +7,7 @@ export const GetPage = gql`
 			_slug
 			title
 			__typename
+
 			hero {
 				_id
 				__typename
@@ -43,13 +44,16 @@ export const GetPage = gql`
 				__typename
 				... on Row {
 					_id
+					__typename
 				}
 
 				... on CTA {
 					_id
+					__typename
 				}
 				... on Article {
 					_id
+					__typename
 				}
 			}
 		}
