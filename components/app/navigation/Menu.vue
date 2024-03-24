@@ -8,7 +8,7 @@
 </script>
 
 <template>
-	<div
+	<nav
 		class="sticky top-0 bg-white grid-container"
 		:class="menuStore.state ? 'h-screen' : ''"
 	>
@@ -31,5 +31,5 @@
 			/>
 			<slot />
 		</div>
-	</div>
+	</nav>
 </template>

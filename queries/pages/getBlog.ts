@@ -1,13 +1,12 @@
 import { gql } from "@apollo/client";
 
-export const GetPage = gql`
-	query GetPage($slug: String) {
+export const GetBlog = gql`
+	query GetBlog($slug: String) {
 		Page(slug: $slug) {
 			_id
 			_slug
 			title
 			__typename
-
 			hero {
 				_id
 				__typename
@@ -42,15 +41,6 @@ export const GetPage = gql`
 
 			stack {
 				__typename
-				... on Row {
-					_id
-					__typename
-				}
-
-				... on CTA {
-					_id
-					__typename
-				}
 				... on Article {
 					_id
 					__typename
