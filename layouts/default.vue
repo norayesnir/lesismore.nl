@@ -6,7 +6,7 @@
 	<div>
 		<SpeedInsights />
 		<AppNavigationMenu class="z-10" />
-		<div class="relative grid-container md:pt-[72px]">
+		<div class="relative grid-container">
 			<slot />
 		</div>
 		<AppFooterMenu class="pt-20" />

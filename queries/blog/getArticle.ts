@@ -18,6 +18,15 @@ export const GetArticle = gql`
 				... on Text {
 					__typename
 					_id
+					html
+				}
+			}
+			seo {
+				title
+				description
+				social_media_image {
+					_id
+					url
 				}
 			}
 		}

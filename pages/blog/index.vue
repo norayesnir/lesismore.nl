@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+	import { GetBlog } from "~/queries/pages/getBlog";
 	import { GetArchive } from "~/queries/blog/getArchive";
 
 	interface Article {
@@ -12,9 +13,11 @@
 		class: string;
 	}
 
-	const response = await useAsyncQuery(GetArchive);
+	const response = await useAsyncQuery(GetBlog, { slug: "blog" });
+	const getArchive = await useAsyncQuery(GetArchive);
 
 	const data = ref(response.data);
+	const archive = ref(getArchive.data);
 
 	function* shuffleNumbers() {
 		const numbers = [3, 4, 5];
@@ -29,28 +32,32 @@
 	const numberGenerator = shuffleNumbers();
 
 	const articles = ref<Article[]>(
-		data.value?.Articles.items.map((article: any) => ({
+		archive.value?.Articles.items.map((article: any) => ({
 			...article,
-			class: `col-span-${numberGenerator.next().value}`,
+			class: `xl:col-span-${numberGenerator.next().value}`,
 		}))
 	);
 </script>
 
 <template>
-	<div>
-		<h1>Blog</h1>
-		<div class="grid grid-cols-12 gap-4 lg:gap-8">
-			<div
-				v-if="articles && articles.length"
-				v-for="article in articles"
-				:class="article.class"
-			>
-				<LazyAppBlogPostCard
-					:id="article._id"
-					:key="article._id"
-					v-if="article._id"
-				/>
+	<section class="grid-container-screen">
+		<AppContentImage v-if="data.Page.hero" :data="data.Page.hero" />
+
+		<div class="grid-container">
+			<div class="flex flex-wrap grid-cols-12 gap-4 md:grid lg:gap-8">
+				<div
+					v-if="articles && articles.length"
+					v-for="article in articles"
+					:class="article.class"
+					class="transition-all md:col-span-6 lg:col-span-4"
+				>
+					<LazyAppArticle
+						:data="article"
+						:key="article._id"
+						v-if="article._id"
+					/>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>

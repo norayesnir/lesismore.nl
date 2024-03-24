@@ -1,6 +1,4 @@
 <script setup lang="ts">
-	import { background, rounding, alignment } from "~/utils/styling";
-
 	const props = defineProps({
 		data: {
 			type: Object,
@@ -8,36 +6,53 @@
 		},
 	});
 
-	const style = [
-		background(props.data.background_color, true),
-		rounding(props.data.rounding),
-		alignment(props.data.alignment, true),
-	]
-		.filter(Boolean)
-		.join(" ");
+	const buttons = props.data.value?.buttons.filter(Boolean);
 </script>
 
 <template>
-	<div
-		class="flex flex-col items-center grid-cols-12 gap-4 md:grid md:gap-8"
+	<section
+		class="relative mb-20 max-w-[2000px] mx-auto overflow-hidden container-rounding shadow-2xl"
 	>
-		<div
-			:class="style"
-			class="rounded-[32px] flex flex-col w-full gap-4 p-4 py-20 md:px-8 md:gap-6 md:col-span-7"
-		>
-			<h1 class="h1">{{ props.data.title }}</h1>
-			<div v-html="props.data.text"></div>
+		<div class="text-white grid-container">
+			<div class="py-[10rem] flex flex-col gap-4 md:w-2/3">
+				<h1 v-if="props.data.title && props.data.title.length" class="h1">
+					{{ props.data.title }}
+				</h1>
 
-			<div class="flex flex-wrap gap-4 lg:gap-8 align-center">
-				<Button v-for="button in props.data.buttons" :data="button" />
+				<div
+					v-if="props.data.text && props.data.text.length"
+					v-html="props.data.text"
+				></div>
+
+				<div class="flex flex-wrap gap-4 lg:gap-8 align-center">
+					<Button
+						v-if="buttons && buttons.length"
+						v-for="(button, index) in buttons.filter(Boolean)"
+						:key="index"
+						:data="button"
+					/>
+				</div>
 			</div>
 		</div>
 
-		<figure
-			v-if="props.data.image"
-			class="relative hidden overflow-hidden md:block rounded-3xl md:col-span-5 drop-shadow-2xl"
-		>
-			<NuxtImg :src="props.data.image.url" :alt="props.data.image.alt" />
-		</figure>
-	</div>
+		<div class="absolute inset-0 w-full overflow-hidden -z-10">
+			<div class="absolute inset-0 z-10 bg-black/50"></div>
+			<NuxtPicture
+				v-if="props.data.image"
+				class="[&>img]:object-center [&>img]:object-cover [&>img]:w-full [&>img]:h-full"
+				format="webp"
+				:placeholder="[50, 25, 75, 5]"
+				:src="props.data.image.url"
+				:alt="props.data.image.alt"
+			/>
+		</div>
+	</section>
 </template>
+
+<style lang="scss" scoped>
+	@media screen and (min-width: 2000px) {
+		.container-rounding {
+			@apply rounded-[32px];
+		}
+	}
+</style>
